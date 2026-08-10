@@ -15,10 +15,9 @@ activity. If any demon in your collection knows a passive, you earn more — the
 | --- | --- | --- |
 | Fortuna I | +5% | 2,000 |
 | Fortuna II | +20% | 8,000 |
-| Fortuna III | +60% | 25,000 |
-| Fortuna IV | +100% | 60,000 |
-| Fortuna V | +150% | 150,000 |
-| Fortuna VI | +200% | 400,000 |
+| Fortuna III | +40% | 20,000 |
+| Fortuna IV | +70% | 45,000 |
+| Fortuna V | +100% (max) | 100,000 |
 
 ## How to get one
 
