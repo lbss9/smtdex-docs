@@ -1,0 +1,20 @@
+title: SMTDex
+description: >-
+  A Discord bot to collect, level, fuse, trade, and battle demons and personas
+  from the Shin Megami Tensei and Persona universe.
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
+search_enabled: true
+heading_anchors: true
+
+aux_links:
+  GitHub: https://github.com/lbss9/smtdex-docs
+
+footer_content: >-
+  SMTDex is an unofficial, fan-made project. Demon data and artwork are the
+  property of their respective owners. Not affiliated with or endorsed by ATLUS
+  or SEGA.
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
