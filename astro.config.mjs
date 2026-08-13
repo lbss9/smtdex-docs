@@ -76,6 +76,11 @@ export default defineConfig({
               translations: { 'pt-BR': 'Comandos' },
               slug: 'commands',
             },
+            {
+              label: 'Changelog',
+              translations: { 'pt-BR': 'Changelog' },
+              slug: 'changelog',
+            },
           ],
         },
         {

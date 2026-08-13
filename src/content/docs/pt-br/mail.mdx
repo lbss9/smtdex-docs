@@ -1,11 +1,17 @@
 ---
 title: Mail
-description: Envie demons e macca, receba tudo de uma vez ou devolva um pacote.
+description: Envie demons e macca, cobre um PayIn, ou devolva um pacote.
 ---
 
-`/mail` abre a caixa de entrada. Passe um usuário (e, se quiser, macca ou mensagem) para começar um pacote novo.
+`/mail` abre a caixa de entrada. Passe um usuário (e, se quiser, macca, preço PayIn ou mensagem) para começar um pacote novo.
 
 Dá para anexar demons seus que não sejam favoritos e que não estejam presos em outro mail. O texto pode ter até 500 caracteres.
+
+## PayIn
+
+Defina `preco` na composição para cobrar o destinatário. O pacote (demons e/ou macca de presente) fica retido até a pessoa **pagar esse valor** e receber. A macca paga vai para o remetente.
+
+Se não tiver macca bastante, o mail continua pendente. Ainda dá para **devolver** sem pagar. **Receber todos** só pega mail grátis — pacotes PayIn precisam ser aceitos um a um.
 
 ## Caixa de entrada
 
@@ -13,9 +19,9 @@ Mail pendente lista cada demon anexado por nome e nível — não um contador ge
 
 Na inbox você pode:
 
-- Abrir um mail e **receber** (claim de demons e macca).
+- Abrir um mail e **receber** (ou **Pagar X e receber** quando há PayIn).
 - **Devolver** ao remetente (com confirmação).
-- **Receber todos** — dá claim em todo mail pendente de uma vez. O embed mostra `Recebidos: N · Falharam: M` se algo falhar (por exemplo um demon que já não pode ser entregue).
+- **Receber todos** — dá claim em todo mail pendente grátis de uma vez. O embed mostra `Recebidos: N · Falharam: M` se algo falhar.
 
 O remetente pode cancelar um mail pendente pela pasta de enviados. Demons em trânsito ficam retidos até o mail ser recebido, devolvido ou cancelado.
 

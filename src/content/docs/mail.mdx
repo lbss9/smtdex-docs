@@ -1,11 +1,17 @@
 ---
 title: Mail
-description: Send demons and macca, claim everything at once, or send a package back.
+description: Send demons and macca, charge a PayIn price, or send a package back.
 ---
 
-`/mail` opens your inbox. Pass a user (and optional macca or message) to start a new package.
+`/mail` opens your inbox. Pass a user (and optional macca, PayIn price, or message) to start a new package.
 
 You can attach demons you own that are not favorites and not already held in another mail. The body can be up to 500 characters.
+
+## PayIn
+
+Set `preco` when composing to charge the recipient. The package (demons and/or gifted macca) stays held until they **pay that price** and receive it. The macca they pay goes to the sender.
+
+If they cannot afford it, the mail stays pending. They can still **return** it without paying. **Receber todos** only claims free mail — PayIn packages must be accepted one by one.
 
 ## Inbox
 
@@ -13,9 +19,9 @@ Pending mail lists each attached demon by name and level — not a generic count
 
 From the inbox you can:
 
-- Open a mail and **receive** it (claim demons and macca).
+- Open a mail and **receive** it (or **Pagar X e receber** when there is a PayIn).
 - **Return** it to the sender (with confirmation).
-- **Receber todos** — claim every pending mail in one tap. The embed reports `Recebidos: N · Falharam: M` if anything fails (for example a demon that can no longer be delivered).
+- **Receber todos** — claim every free pending mail in one tap. The embed reports `Recebidos: N · Falharam: M` if anything fails.
 
 The sender can cancel a pending mail from the sent folder. Demons in transit are held until the mail is claimed, returned, or cancelled.
 

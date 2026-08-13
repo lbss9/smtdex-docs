@@ -1,0 +1,39 @@
+---
+title: Changelog
+description: Release history for SMTDex version 1.
+---
+
+This is the project **changelog** — a dated log of what shipped in each version, not the raw git commit list.
+
+## 1.0.0 — 12 August 2026
+
+First public version of the SMT V Discord bot.
+
+### Play
+
+- `/start` with Pixie, Slime, Onmoraki, Cait Sith, or Angel, plus 500 macca.
+- Wild spawns about every three minutes: capture by name or battle. DLC species do not spawn.
+- Fled spawns keep the image and show when the demon appeared and left, without the name.
+- `/moon` for phase and spawn odds.
+- Stars 1–5; new/full moon and weekends (Brasília) push rare rolls.
+
+### Combat
+
+- `/battle` UI: **Arena** (PvE), **Duelo** (PvP parties), **Confisco** (one demon; the loser loses it).
+- Parties of up to four via `/party`.
+- Battle XP follows SMT V’s `1.15ⁿ` level-difference curve. Duelo and Confisco do not pay XP or macca.
+
+### Fusion, mail, shop
+
+- `/fuse` with 2 / 3 / 4 parents and reverse. Result stars are the minimum of the parents.
+- `/mail` holds demons in transit. **PayIn** lets the sender set a macca price the recipient must pay to receive the package.
+- **Receber todos** claims free mail only.
+- `/shop` daily skills. `/compendium` home with Demons and Skills. `/info`, `/balance`.
+
+### Platform
+
+- Postgres telemetry for battles, skills, fusions, spawns, and economy.
+- Hourly database dumps on the host SSD with daily/weekly rotation so retention stays small.
+- Player wiki in English and Portuguese.
+
+Older command names (`/lua`, `/sacrifice`, `/trade`, `/collection`, `/skill`, `/battle pve`) are gone.
