@@ -1,0 +1,32 @@
+:root {
+  --sl-color-accent-low: #3d2e0a;
+  --sl-color-accent: #d4a017;
+  --sl-color-accent-high: #f0d78c;
+  --sl-color-white: #f6edd9;
+  --sl-color-gray-1: #e8dcc4;
+  --sl-color-gray-2: #c9b896;
+  --sl-color-gray-3: #8a7a5c;
+  --sl-color-gray-4: #4a5568;
+  --sl-color-gray-5: #1e2a3d;
+  --sl-color-gray-6: #121a2b;
+  --sl-color-black: #0a1220;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #f4d4d0;
+  --sl-color-accent: #8b1e1e;
+  --sl-color-accent-high: #4a0f0f;
+  --sl-color-white: #1c140c;
+  --sl-color-gray-1: #2a2118;
+  --sl-color-gray-2: #3d3226;
+  --sl-color-gray-3: #6b5a45;
+  --sl-color-gray-4: #c4b49a;
+  --sl-color-gray-5: #e8dcc4;
+  --sl-color-gray-6: #f3ead8;
+  --sl-color-gray-7: #f8f1e3;
+  --sl-color-black: #fbf6ea;
+}
+
+:root {
+  --sl-font: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+}

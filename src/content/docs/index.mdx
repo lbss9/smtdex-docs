@@ -1,0 +1,36 @@
+---
+title: SMTDex
+description: Capture, fuse, and battle demons from Shin Megami Tensei in Discord.
+template: splash
+hero:
+  tagline: An unofficial Shin Megami Tensei Discord bot. Chat, hunt, fuse, and fight.
+  actions:
+    - text: Getting started
+      link: getting-started/
+      icon: right-arrow
+    - text: Command list
+      link: commands/
+      icon: document
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+SMTDex turns your server into a hunting ground for demons from *Shin Megami Tensei V*. Talk in the channels, wild demons appear, and you capture them by typing their name. Then you build a party, fuse stronger forms, and battle.
+
+<CardGrid stagger>
+  <Card title="Hunt" icon="magnifier">
+    Spawns appear about every three minutes. Type the demon’s name to capture it, or fight it in a wild encounter.
+  </Card>
+  <Card title="Collect" icon="star">
+    Each instance has 1–5 stars. Check `/compendium` for your demons and purchased skills, and `/info` for catalog details.
+  </Card>
+  <Card title="Battle" icon="rocket">
+    `/battle` opens a menu: **Arena** (PvE), **Duelo** (PvP with parties), or **Confisco** (PvP for a single demon).
+  </Card>
+  <Card title="Fuse" icon="puzzle">
+    `/fuse` supports 2-, 3-, and 4-parent recipes plus reverse fusion. The result’s stars are the minimum of the parents.
+  </Card>
+</CardGrid>
+
+SMTDex is an unofficial fan project. It is not affiliated with, endorsed by, or sponsored by ATLUS or SEGA. Demon names and artwork belong to their respective owners.

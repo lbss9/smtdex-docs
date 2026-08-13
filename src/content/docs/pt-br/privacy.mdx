@@ -1,0 +1,48 @@
+---
+title: Privacidade
+description: Quais dados o SMTDex processa e por quê.
+---
+
+_Última atualização: 12 de agosto de 2026_
+
+Esta política explica quais dados o SMTDex (o "Bot") processa e por quê. Ao usar o Bot, você consente com as práticas descritas aqui.
+
+## Dados que processamos
+
+**Identificadores do Discord.** Guardamos o **ID de usuário** do Discord e os **IDs de servidor (guild) e canal** em que o Bot opera. **Não** guardamos nome de usuário, avatar nem e-mail do Discord.
+
+**Dados de jogo.** Guardamos o necessário para o jogo funcionar: os demons que você tem, níveis, XP, IVs e movesets; saldo de macca e ajustes de perfil; parties; e mail em trânsito.
+
+**Conteúdo de mensagens.** O Bot usa a intent de Message Content do Discord para detectar quando alguém digita o nome certo e captura um demon spawnado. O conteúdo da mensagem é processado **só de forma transitória, para esse fim**. O Bot **não** armazena o texto das suas mensagens. O chat não concede XP nem macca.
+
+**Dados efêmeros.** Valores de curta duração, como o estado de spawn por canal e cooldowns de comando, ficam num cache em memória (Redis) e não fazem parte do seu registro permanente.
+
+**Telemetria.** Eventos agregados de jogo (batalhas, skills, fusões, spawns, economia) podem ser armazenados para balanceamento. Materiais públicos não exibem IDs de usuário do Discord.
+
+## Como usamos os dados
+
+Somente para operar o jogo — spawn, captura, progressão, economia, mail e batalhas. **Não** vendemos seus dados, não os usamos para publicidade e não os compartilhamos com terceiros, salvo o necessário para o serviço (por exemplo banco de dados e hospedagem) ou para cumprir a lei.
+
+## Retenção e exclusão
+
+Os dados de jogo permanecem enquanto você usa o Bot. Você pode pedir a exclusão a qualquer momento (veja **Contato**); removeremos o registro do jogador e os demons associados. Parte dos dados pode persistir por pouco tempo em backups até ser sobrescrita.
+
+## Serviços de terceiros
+
+O Bot roda no Discord e depende de hospedagem e banco de dados comuns. Artes de demons vêm de wikis de terceiros; abrir essas imagens está sujeito às políticas desses hosts.
+
+## Crianças
+
+O Bot se destina a quem atende à idade mínima do Discord. Não coletamos dados, de forma consciente, de ninguém abaixo dessa idade.
+
+## Alterações
+
+Podemos atualizar esta política. Mudanças relevantes aparecem na data de "última atualização" acima.
+
+## Contato
+
+Para perguntar ou pedir exclusão de dados, fale pelo [repositório no GitHub](https://github.com/lbss9/smtdex-docs).
+
+---
+
+Este documento é um modelo geral e não constitui aconselhamento jurídico. Considere consultar um profissional antes de operar o Bot publicamente.

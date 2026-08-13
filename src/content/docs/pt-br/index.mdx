@@ -1,0 +1,36 @@
+---
+title: SMTDex
+description: Capture, funda e lute com demons de Shin Megami Tensei no Discord.
+template: splash
+hero:
+  tagline: Um bot não oficial de Shin Megami Tensei. Converse, cace, funda e lute.
+  actions:
+    - text: Primeiros passos
+      link: getting-started/
+      icon: right-arrow
+    - text: Lista de comandos
+      link: commands/
+      icon: document
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+O SMTDex transforma o servidor num campo de caça aos demons de *Shin Megami Tensei V*. Converse nos canais, demons selvagens aparecem, e você os captura digitando o nome. Depois monta a party, funde formas mais fortes e batalha.
+
+<CardGrid stagger>
+  <Card title="Caçar" icon="magnifier">
+    Spawns surgem a cada três minutos, mais ou menos. Digite o nome do demon para capturar, ou lute no encontro selvagem.
+  </Card>
+  <Card title="Colecionar" icon="star">
+    Cada instância tem de 1 a 5 estrelas. Use `/compendium` para ver seus demons e skills compradas, e `/info` para o catálogo.
+  </Card>
+  <Card title="Batalhar" icon="rocket">
+    `/battle` abre um menu: **Arena** (PvE), **Duelo** (PvP com parties) ou **Confisco** (PvP por um único demon).
+  </Card>
+  <Card title="Fundir" icon="puzzle">
+    `/fuse` cobre receitas de 2, 3 e 4 pais, além da fusão reversa. As estrelas do resultado são o mínimo dos pais.
+  </Card>
+</CardGrid>
+
+O SMTDex é um projeto de fã, não oficial. Não é afiliado, endossado nem patrocinado pela ATLUS ou pela SEGA. Nomes e artes dos demons pertencem aos respectivos donos.
