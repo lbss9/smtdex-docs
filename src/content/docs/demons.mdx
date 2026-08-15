@@ -1,33 +1,20 @@
 ---
 title: Demons
-description: Stars, the compendium, and looking up catalog entries.
+description: Stars, inventory, the 999 stat cap, and Mitama.
 ---
 
-Each owned demon is its own instance: level, stars, moveset, and nickname.
+Each owned demon is its own instance: level, stars, moveset, nickname, and **Mitama bonus**.
 
 ## Stars
 
-| Stars | Label |
-| --- | --- |
-| 1★ | ⭐ |
-| 2★ | ⭐⭐ |
-| 3★ | ⭐⭐⭐ |
-| 4★ | 🌟🌟🌟🌟 |
-| 5★ | 💠 Legendary |
+1★ to 5★ (💠 legendary). Stars multiply stats, HP, and MP. Fusion results inherit the **minimum of the parents**. Mitama infusion does **not** change the recipient’s stars.
 
-Stars multiply stats, HP, and MP. 1★ is baseline; 5★ is far above average.
+## Stats
 
-On fusion, the result’s stars are the **minimum of the parents**. A 5★ fused with a 2★ becomes 2★. The preview tells you which parent limited the roll.
+HP, MP, Strength, Magic, Vitality, Agility, and Luck cap at **999** on `/info` and in combat. Per-hit damage caps at 99,999.
 
-## Compendium
+Mitama infusion adds +20% to two stats until **2× unbuffed base**. See [Fusion & Mitama](../fusion/) and [Items & gems](../items/).
 
-`/compendium` opens a home screen with two buttons:
+## Inventory
 
-- **Demons** — your collection, details, and moveset swaps.
-- **Skills** — skills you bought from the shop.
-
-There are no slash subcommands. Pick everything in the UI, then **Fechar** when you are done.
-
-## Info
-
-`/info` looks up a species in the catalog, or one of your owned demons if you point it at an instance. Use it for resistances, skills, and potentials.
+`/inventory` lists the collection (cap 100). `/info` looks up a species or an instance you own.

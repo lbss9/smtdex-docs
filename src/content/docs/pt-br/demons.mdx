@@ -1,33 +1,20 @@
 ---
 title: Demons
-description: Estrelas, o compendium e a consulta ao catálogo.
+description: Estrelas, inventário, stats 999 e Mitama.
 ---
 
-Cada demon seu é uma instância própria: nível, estrelas, moveset e apelido.
+Cada demon seu é uma instância: nível, estrelas, moveset, apelido e **bônus Mitama**.
 
 ## Estrelas
 
-| Estrelas | Rótulo |
-| --- | --- |
-| 1★ | ⭐ |
-| 2★ | ⭐⭐ |
-| 3★ | ⭐⭐⭐ |
-| 4★ | 🌟🌟🌟🌟 |
-| 5★ | 💠 Lendário |
+1★ a 5★ (💠 lendário). Estrelas multiplicam stats, HP e MP. Na fusão, o resultado herda o **mínimo dos pais**. Infusão Mitama **não** muda as estrelas do receptor.
 
-Estrelas multiplicam stats, HP e MP. 1★ é o neutro; 5★ fica bem acima da média.
+## Stats
 
-Na fusão, as estrelas do resultado são o **mínimo dos pais**. Um 5★ fundido com um 2★ vira 2★. O preview mostra qual pai limitou o resultado.
+HP, MP, Strength, Magic, Vitality, Agility e Luck têm teto **999** no `/info` e na luta. Dano por golpe, 99999.
 
-## Compendium
+Mitama infunde +20% em dois stats até **2× o base**. Ver [Fusão e Mitama](../fusion/) e [Items e gemas](../items/).
 
-`/compendium` abre uma tela inicial com dois botões:
+## Inventário
 
-- **Demons** — sua coleção, detalhes e troca de moveset.
-- **Skills** — skills que você comprou na loja.
-
-Não há subcomandos no slash. Tudo se escolhe na interface; use **Fechar** quando terminar.
-
-## Info
-
-`/info` consulta uma espécie no catálogo, ou um demon seu se você apontar para uma instância. Serve para resistências, skills e potenciais.
+`/inventory` lista a coleção (teto 100). `/info` consulta a espécie ou uma instância sua.

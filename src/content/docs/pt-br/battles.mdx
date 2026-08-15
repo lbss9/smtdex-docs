@@ -1,32 +1,31 @@
 ---
 title: Party e batalhas
-description: Arena, Duelo, Confisco e como as parties funcionam.
+description: Arena, Duelo, Confisco, Exploração, Expedição e Salão Infernal.
 ---
 
-Uma party tem até **quatro** demons. Crie e edite parties com `/party`. Arena e Duelo usam party; Confisco usa um único demon.
+Uma party tem até **quatro** demons. Crie e edite com `/party`. Stats de combate (HP, MP, STR, MAG, VIT, AGI, LCK) têm teto **999**. Dano por golpe, 99999.
 
 ## `/battle`
 
-Não há subcomandos nem oponente digitado. O comando abre um menu privado:
+Menu privado: **PvE** ou **PvP**.
 
-1. Escolha **PvE** ou **PvP**.
-2. PvE vai direto para a **Arena**. PvP pergunta **Duelo** ou **Confisco**.
-3. No PvP, escolha o oponente no seletor de usuários do Discord — ninguém digita nome.
-4. Arena e Duelo: escolha uma party. Confisco: escolha **um demon**.
-5. O oponente precisa aceitar. No Confisco, os dois também confirmam a aposta.
+PvE: **Arena**, **Exploração**, **Expedição**, **Salão Infernal**.  
+PvP: **Duelo** (parties) ou **Confisco** (um demon; o perdedor perde).
 
-Use **Fechar** para abortar a preparação. Menus ociosos fecham depois de um minuto. A confirmação dupla do Confisco dura 90 segundos.
+Use **Fechar**. Menus ociosos fecham em um minuto. Confisco pede confirmação dupla (90 s).
 
 ## Arena
 
-Jogador contra o ambiente. Depois de escolher a party, você decide se controla os turnos ou deixa a luta no automático. Vencer concede XP e macca. Batalhas de spawn selvagem funcionam do mesmo jeito quando o spawn é uma luta.
+Jogador contra o ambiente. Depois da party, você controla os turnos ou deixa no automático. Vencer dá XP e macca. Spawns selvagens de luta funcionam igual. A Arena **equilibra** nível/estrelas com a party.
 
 ## Duelo
 
-Jogador contra jogador com parties. O vencedor se decide no combate. Ninguém perde demons.
+PvP com parties. Ninguém perde demons. Sem XP nem macca.
 
 ## Confisco
 
-Jogador contra jogador com **um demon cada**. O perdedor **perde esse demon** — ele passa para o vencedor. Os dois precisam confirmar antes da luta. Este é o único modo que confisca um demon.
+PvP com **um demon cada**. O perdedor **perde esse demon**. Os dois confirmam. Único modo que confisca.
 
-A palavra *sacrifice* não aparece no bot. O modo se chama **Confisco**.
+## Magatsuhi
+
+Barra 0–100 da party. Enche no combate; skills Magatsuhi (rank 50) aparecem no select quando está cheia e drenam a barra inteira sem gastar Press Turn. Ver [Magatsuhi](../magatsuhi/).

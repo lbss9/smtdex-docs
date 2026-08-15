@@ -47,14 +47,44 @@ export default defineConfig({
               slug: 'demons',
             },
             {
+              label: 'Inventory',
+              translations: { 'pt-BR': 'Inventário' },
+              slug: 'inventory',
+            },
+            {
               label: 'Party & battles',
               translations: { 'pt-BR': 'Party e batalhas' },
               slug: 'battles',
             },
             {
-              label: 'Fusion',
-              translations: { 'pt-BR': 'Fusão' },
+              label: 'Exploration',
+              translations: { 'pt-BR': 'Exploração' },
+              slug: 'exploration',
+            },
+            {
+              label: 'Expedition',
+              translations: { 'pt-BR': 'Expedição' },
+              slug: 'expedition',
+            },
+            {
+              label: 'Infernal Hall',
+              translations: { 'pt-BR': 'Salão Infernal' },
+              slug: 'infernal-hall',
+            },
+            {
+              label: 'Fusion & Mitama',
+              translations: { 'pt-BR': 'Fusão e Mitama' },
               slug: 'fusion',
+            },
+            {
+              label: 'Items & gems',
+              translations: { 'pt-BR': 'Items e gemas' },
+              slug: 'items',
+            },
+            {
+              label: 'Magatsuhi',
+              translations: { 'pt-BR': 'Magatsuhi' },
+              slug: 'magatsuhi',
             },
             {
               label: 'Mail',
@@ -67,8 +97,8 @@ export default defineConfig({
               slug: 'shop',
             },
             {
-              label: 'Macca & XP',
-              translations: { 'pt-BR': 'Macca e XP' },
+              label: 'Macca, XP & Renown',
+              translations: { 'pt-BR': 'Macca, XP e Renome' },
               slug: 'macca-xp',
             },
             {

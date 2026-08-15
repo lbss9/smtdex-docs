@@ -1,37 +1,50 @@
 ---
 title: Changelog
-description: Release history for SMTDex version 1.
+description: SMTDex version history.
 ---
 
-This is the project **changelog** — a dated log of what shipped in each version, not the raw git commit list.
+Dated record of what shipped. The bot is at **2.4.0**.
+
+## 2.4.0 — 15 August 2026
+
+**Mitama** infusion (Nocturne): Element × Element, Rag's Jewelry (gems or expensive macca), +20% on two stats up to 2× base (cap 999). `/shop` gained **Sell category** and **Sell all**. Incense left the shop.
+
+## 2.3.1 — 15 August 2026
+
+Combat stat cap **dropped to 999, from 9999**. Per-hit damage stayed at 99,999.
+
+## 2.3.0 — 15 August 2026
+
+**Infernal Hall**: 9 Fiends, 1 vs party, Candelabra. Red Discord buttons only on Close / Decline / Flee.
+
+## 2.2.x — 14 August 2026
+
+`/inventory` replaces `/compendium`. Skill Cards and demons paginate. Shop no longer sells Skill Cards.
+
+## 2.1.x — 14 August 2026
+
+ClickHouse telemetry. Shop categories and quantity 1–99. Expedition farm loot.
+
+## 2.0.0 — 13 August 2026
+
+Expedition: Amala Labyrinth, 5 Kalpas.
+
+## 1.4.x — 13 August 2026
+
+Exploration (Suginami → Mirages). 100-demon cap. `/info` shows every stat.
+
+## 1.3.x — 13 August 2026
+
+File-based catalog. Item shop by Renown rank. Magatsuhi. Mail can attach items.
+
+## 1.2.0 — 13 August 2026
+
+Magatsuhi, items, Renown, `/profile`.
+
+## 1.1.0 — 12 August 2026
+
+XP catch-up, moon in combat, short Refs.
 
 ## 1.0.0 — 12 August 2026
 
-First public version of the SMT V Discord bot.
-
-### Play
-
-- `/start` with Pixie, Slime, Onmoraki, Cait Sith, or Angel, plus 500 macca.
-- Wild spawns about every three minutes: capture by name or battle. DLC species do not spawn.
-- Fled spawns keep the image and show when the demon appeared and left, without the name.
-- `/moon` for phase and spawn odds.
-- Stars 1–5; new/full moon and weekends (Brasília) push rare rolls.
-
-### Combat
-
-- `/battle` UI: **Arena** (PvE), **Duelo** (PvP parties), **Confisco** (one demon; the loser loses it).
-- Parties of up to four via `/party`.
-- Battle XP follows SMT V’s `1.15ⁿ` level-difference curve. Duelo and Confisco do not pay XP or macca.
-
-### Fusion, mail, shop
-
-- `/fuse` with 2 / 3 / 4 parents and reverse. Result stars are the minimum of the parents.
-- `/mail` holds demons in transit. **PayIn** lets the sender set a macca price the recipient must pay to receive the package.
-- **Receber todos** claims free mail only.
-- `/shop` daily skills. `/compendium` home with Demons and Skills. `/info`, `/balance`.
-
-### Platform
-
-- Postgres telemetry for battles, skills, fusions, spawns, and economy.
-- Hourly database dumps on the host SSD with daily/weekly rotation so retention stays small.
-- Player wiki in English and Portuguese.
+First public release: `/start`, spawns, `/battle`, `/fuse`, `/mail`, `/shop`.

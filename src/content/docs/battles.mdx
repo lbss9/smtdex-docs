@@ -1,32 +1,31 @@
 ---
 title: Party & battles
-description: Arena, Duelo, Confisco, and how parties work.
+description: Arena, Duelo, Confisco, Exploration, Expedition, and Infernal Hall.
 ---
 
-A party has up to **four** demons. Create and edit parties with `/party`. Arena and Duelo use a party; Confisco uses a single demon.
+A party holds up to **four** demons. Edit with `/party`. Combat stats (HP, MP, STR, MAG, VIT, AGI, LCK) cap at **999**. Per-hit damage caps at 99,999.
 
 ## `/battle`
 
-There are no subcommands and no typed opponent. The command opens a private menu:
+Private menu: **PvE** or **PvP**.
 
-1. Choose **PvE** or **PvP**.
-2. PvE goes straight to **Arena**. PvP asks for **Duelo** or **Confisco**.
-3. In PvP, pick the opponent with Discord’s user selector — you never type a name.
-4. Arena and Duelo: pick a party. Confisco: pick **one demon**.
-5. The opponent must accept. In Confisco, both players also confirm the stake.
+PvE: **Arena**, **Exploration**, **Expedition**, **Infernal Hall**.  
+PvP: **Duelo** (parties) or **Confisco** (one demon; the loser loses it).
 
-Use **Fechar** to abort setup. Idle setup menus close after one minute. The Confisco dual confirmation lasts 90 seconds.
+Use **Fechar**. Idle menus close after a minute. Confisco needs a double confirm (90 s).
 
 ## Arena
 
-Player versus the environment. After you pick a party, you choose whether to control turns or let the fight run automatically. Winning grants XP and macca. Wild spawn battles work the same way when the spawn is a fight.
+Player vs environment. After picking a party you can play turns or auto. Wins grant XP and macca. Wild fight spawns work the same. Arena **scales** level/stars to the party.
 
 ## Duelo
 
-Player versus player with parties. The winner is decided in combat. You do not lose demons.
+PvP with parties. Nobody loses demons. No XP or macca.
 
 ## Confisco
 
-Player versus player with **one demon each**. The loser **loses that demon** — it is transferred to the winner. Both players must confirm before the fight starts. This is the only mode that confiscates a demon.
+PvP with **one demon each**. The loser **loses that demon**. Both players confirm. This is the only confiscation mode.
 
-The word *sacrifice* is not used in the bot. The mode is called **Confisco**.
+## Magatsuhi
+
+Party gauge 0–100. Magatsuhi skills (rank 50) appear in the skill select when full and drain the whole bar without spending a Press Turn. See [Magatsuhi](../magatsuhi/).

@@ -1,37 +1,50 @@
 ---
 title: Changelog
-description: Histórico de versões do SMTDex 1.
+description: Histórico de versões do SMTDex.
 ---
 
-Este é o **changelog** do projeto — o registro datado do que entrou em cada versão, não a lista crua de commits.
+Registro datado do que entrou em cada versão. O bot está em **2.4.0**.
+
+## 2.4.0 — 15 de agosto de 2026
+
+Infusão **Mitama** (Nocturne): Element × Element, Rag's Jewelry (gemas ou macca cara), +20% em dois stats até 2× o base (máx. 999). `/shop` ganhou **Vender categoria** e **Vender tudo**. Incensos saíram da loja.
+
+## 2.3.1 — 15 de agosto de 2026
+
+Teto de stats de combate **reduziu para 999, de 9999**. Dano por golpe continuou 99999.
+
+## 2.3.0 — 15 de agosto de 2026
+
+**Salão Infernal**: 9 Fiends, 1 vs party, Candelabros. Vermelho nas UIs só em Fechar / Recusar / Fugir.
+
+## 2.2.x — 14 de agosto de 2026
+
+`/inventory` no lugar de `/compendium`. Skill Cards e demons paginam. Loja deixa de vender Skill Cards.
+
+## 2.1.x — 14 de agosto de 2026
+
+Telemetria no ClickHouse. Loja com categorias e quantidade 1–99. Expedição com loot de farm.
+
+## 2.0.0 — 13 de agosto de 2026
+
+Expedição: Labirinto de Amala, 5 Kalpas.
+
+## 1.4.x — 13 de agosto de 2026
+
+Exploração (Suginami → Mirages). Teto de 100 demons. `/info` com todos os stats.
+
+## 1.3.x — 13 de agosto de 2026
+
+Catálogo em arquivo local. Loja de items por rank de Renome. Magatsuhi. Mail com items.
+
+## 1.2.0 — 13 de agosto de 2026
+
+Magatsuhi, items, Renome, `/profile`.
+
+## 1.1.0 — 12 de agosto de 2026
+
+XP catch-up, lua no combate, Refs curtas.
 
 ## 1.0.0 — 12 de agosto de 2026
 
-Primeira versão pública do bot de SMT V no Discord.
-
-### Jogo
-
-- `/start` com Pixie, Slime, Onmoraki, Cait Sith ou Angel, mais 500 macca.
-- Spawns selvagens a cada três minutos: captura pelo nome ou batalha. Espécies DLC não spawnam.
-- Spawn que foge mantém a imagem e mostra quando apareceu e quando foi embora, sem o nome.
-- `/moon` para fase da lua e chances.
-- Estrelas 1–5; lua nova/cheia e fim de semana (Brasília) empurram os rolls raros.
-
-### Combate
-
-- `/battle` na UI: **Arena** (PvE), **Duelo** (PvP com party), **Confisco** (um demon; o perdedor perde).
-- Parties de até quatro em `/party`.
-- XP de luta segue a curva `1,15ⁿ` de SMT V. Duelo e Confisco não pagam XP nem macca.
-
-### Fusão, mail, loja
-
-- `/fuse` com 2 / 3 / 4 pais e reverso. Estrelas do resultado = mínimo dos pais.
-- `/mail` retém demons em trânsito. **PayIn** deixa o remetente cobrar macca para o destinatário receber o pacote.
-- **Receber todos** só pega mail grátis.
-- `/shop` diária. `/compendium` com Demons e Skills. `/info`, `/balance`.
-
-### Plataforma
-
-- Telemetria no Postgres (batalhas, skills, fusões, spawns, economia).
-- Dumps horários do banco no SSD do host, com rotação diária/semanal para não encher o disco.
-- Wiki em inglês e português.
+Primeira versão pública: `/start`, spawns, `/battle`, `/fuse`, `/mail`, `/shop`.

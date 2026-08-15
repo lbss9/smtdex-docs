@@ -1,23 +1,22 @@
 ---
-title: Macca & XP
-description: How battle rewards work. Chat does not grant XP or macca.
+title: Macca, XP & Renown
+description: Fight rewards, shop ranks, and titles.
 ---
 
-Macca is the in-game currency. Check your balance with `/balance`. You start with 500 macca from `/start`.
+Macca is the currency. Check `/balance`. You start with 500 from `/start`.
 
 ## Where macca comes from
 
-- Winning an **Arena** fight or a wild spawn battle.
-- Receiving mail that includes macca.
+Arena, fight spawns, exploration, successful expeditions, shop sales, mail. **Not** from chat.
 
-Macca is spent on fusion attempts and the daily skill shop.
+You spend it on fusion, Rag's Jewelry (expensive), and `/shop`.
 
-## Battle XP
+## XP
 
-Only **Arena** and **spawn battles** grant XP, and only if the player side wins. Duelo and Confisco do not pay XP or macca.
+Only **Arena**, **fight spawns**, **exploration**, and successful **expeditions** grant XP. Duelo and Confisco do not.
 
-XP follows Shin Megami Tensei V’s level-difference curve: each enemy contributes `enemyLevel × 8 × 1.15ⁿ`, where `n` is the level gap versus that party member, clamped between −10 and +10. Higher-level enemies pay more; over-leveled members earn less.
+The curve is SMT V’s: `level × 8 × 1.15ⁿ` per enemy, `n` clamped −10 to +10. Macca from those fights is `level × 12` per enemy (Arena/spawn). Exploration pays a fraction of that.
 
-Macca from those fights is `enemyLevel × 12` per enemy, summed.
+## Renown
 
-Talking in chat does **not** grant XP or macca. Progression comes from battles, fusion, shop skills, and mail.
+It only goes up, to 1,000,000. The shop reads item rank (1–5; rank 5 at 2,500 Renown). `/profile` titles keep climbing after that.
