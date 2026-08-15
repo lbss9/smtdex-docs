@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { describeItem, describeSkill } from './skill-descriptions.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const bot = join(root, '..', 'smt-dex-bot', 'data', 'datastore');
@@ -118,8 +119,8 @@ for (const skill of skills) {
 const skillTables = (locale) => {
   const headers =
     locale === 'pt'
-      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo |'
-      : '| Name | Element | Cost | Power | Rank | Target |';
+      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo | Efeito |'
+      : '| Name | Element | Cost | Power | Rank | Target | Effect |';
   const typeLabel = {
     physical: locale === 'pt' ? 'Físico' : 'Physical',
     magical: locale === 'pt' ? 'Mágico' : 'Magical',
@@ -146,10 +147,10 @@ const skillTables = (locale) => {
       .map((skill) => {
         const mag = isMagatsuhi(skill) && skill.type !== 'passive';
         const extra = mag ? ` (MAG R${magatsuhiRank(skill)} · ${jadeByRank[magatsuhiRank(skill)]} Jade)` : '';
-        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} |`;
+        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} | ${escape(describeSkill(skill, locale))} |`;
       });
     parts.push(
-      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- |\n${rows.join('\n')}\n`,
+      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- |\n${rows.join('\n')}\n`,
     );
   }
   return parts.join('\n');
@@ -158,32 +159,32 @@ const skillTables = (locale) => {
 const itemTables = (locale) => {
   const headers =
     locale === 'pt'
-      ? '| Nome | Tipo | Rank | Compra | Venda | Loja | Drop | Stack |'
-      : '| Name | Kind | Rank | Buy | Sell | Shop | Drop | Stack |';
+      ? '| Nome | Tipo | Rank | Compra | Venda | Loja | Drop | Stack | Efeito |'
+      : '| Name | Kind | Rank | Buy | Sell | Shop | Drop | Stack | Effect |';
   const rows = items
     .slice()
     .sort((a, b) => a.kind.localeCompare(b.kind) || a.rank - b.rank || a.name.localeCompare(b.name, 'en'))
     .map(
       (item) =>
-        `| ${escape(item.name)} | ${escape(item.kind)} | ${item.rank} | ${item.buy ?? 0} | ${item.sell ?? 0} | ${item.shop ? 'yes' : 'no'} | ${item.drop ? 'yes' : 'no'} | ${item.maxStack ?? 1} |`,
+        `| ${escape(item.name)} | ${escape(item.kind)} | ${item.rank} | ${item.buy ?? 0} | ${item.sell ?? 0} | ${item.shop ? 'yes' : 'no'} | ${item.drop ? 'yes' : 'no'} | ${item.maxStack ?? 1} | ${escape(describeItem(item, locale))} |`,
     );
-  return `${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | ---: |\n${rows.join('\n')}\n`;
+  return `${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | ---: | --- |\n${rows.join('\n')}\n`;
 };
 
 const magatsuhiTable = (locale) => {
   const headers =
     locale === 'pt'
-      ? '| Skill | Rank loja | Jade | Tipo | Poder |'
-      : '| Skill | Shop rank | Jade | Type | Power |';
+      ? '| Skill | Rank loja | Jade | Tipo | Poder | Efeito |'
+      : '| Skill | Shop rank | Jade | Type | Power | Effect |';
   const rows = skills
     .filter((skill) => isMagatsuhi(skill) && skill.type !== 'passive')
     .slice()
     .sort((a, b) => a.name.localeCompare(b.name, 'en'))
     .map((skill) => {
       const rank = magatsuhiRank(skill);
-      return `| ${escape(skill.name)} | ${rank} | ${jadeByRank[rank]} | ${escape(skill.type)} | ${skill.damage} |`;
+      return `| ${escape(skill.name)} | ${rank} | ${jadeByRank[rank]} | ${escape(skill.type)} | ${skill.damage} | ${escape(describeSkill(skill, locale))} |`;
     });
-  return `${headers}\n| --- | ---: | ---: | --- | ---: |\n${rows.join('\n')}\n`;
+  return `${headers}\n| --- | ---: | ---: | --- | ---: | --- |\n${rows.join('\n')}\n`;
 };
 
 const write = (rel, body) => {
@@ -226,7 +227,7 @@ title: Skill catalog
 description: All ${skills.length} SMTDex skills, including Magatsuhi shop ranks.
 ---
 
-**${skills.length}** skills. Magatsuhi actives show shop rank and Jade cost at Rag's. Passives with rank 50 are unique miracles — they are **not** sold.
+**${skills.length}** skills with effect text. Magatsuhi actives show shop rank and Jade cost at Rag's. Passives with rank 50 are unique miracles — they are **not** sold.
 
 ${skillTables('en')}
 
@@ -245,7 +246,7 @@ title: Catálogo de skills
 description: Todas as ${skills.length} skills do SMTDex, com rank Magatsuhi da Rag's.
 ---
 
-**${skills.length}** skills. Magatsuhi ativas mostram o rank de loja e o custo em Jade. Passivas rank 50 são miracles únicas — **não** se vendem.
+**${skills.length}** skills com o efeito de cada uma. Magatsuhi ativas mostram o rank de loja e o custo em Jade. Passivas rank 50 são miracles únicas — **não** se vendem.
 
 ${skillTables('pt')}
 
@@ -264,7 +265,7 @@ title: Item catalog
 description: All ${items.length} SMTDex items with shop and drop flags.
 ---
 
-**${items.length}** items. Shop column is the item store (Renown-gated). Rag's gem trades are separate.
+**${items.length}** items with effect text. Shop column is the item store (Renown-gated). Rag's gem trades are separate.
 
 ${itemTables('en')}
 `,
@@ -277,7 +278,7 @@ title: Catálogo de items
 description: Todos os ${items.length} items do SMTDex com loja e drop.
 ---
 
-**${items.length}** items. A coluna Loja é a vitrine de items (por Renome). Trocas da Rag's são à parte.
+**${items.length}** items com o efeito de cada um. A coluna Loja é a vitrine de items (por Renome). Trocas da Rag's são à parte.
 
 ${itemTables('pt')}
 `,
