@@ -233,7 +233,7 @@ ${skillTables('en')}
 
 ## Magatsuhi shop list
 
-Active Magatsuhi only. Pay **Jade only** at \`/shop\` → Rag's → Magatsuhi. Any demon can learn the card.
+Active Magatsuhi only. Pay **Jade only** at \`/rags\` → Magatsuhi. Any demon can learn the card.
 
 ${magatsuhiTable('en')}
 `,
@@ -252,7 +252,7 @@ ${skillTables('pt')}
 
 ## Lista Magatsuhi da Rag's
 
-Só Magatsuhi ativas. Pague **só Jade** em \`/shop\` → Rag's → Magatsuhi. Qualquer demon aprende o card.
+Só Magatsuhi ativas. Pague **só Jade** em \`/rags\` → Magatsuhi. Qualquer demon aprende o card.
 
 ${magatsuhiTable('pt')}
 `,
