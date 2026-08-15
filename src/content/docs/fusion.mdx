@@ -1,48 +1,90 @@
 ---
 title: Fusion & Mitama
-description: 2/3/4-parent fusion, reverse recipes, and Mitama Chamber.
+description: Fuse 2/3/4, reverse, Mitama Chamber, odds, inheritance, and the chart.
 ---
 
-`/fuse` opens a private UI. Favorites are not consumed. The parent list is **highest level first** and **omits Mitamas**. Use the filter (stars, Elements, race) or **Search** by nickname, species, or race.
+`/fuse` opens a private UI. Favorites are **not** consumed. Parents list from **highest level** and **omit Mitamas**. Filter (stars, Elements, race) or **Search** by nickname, species, or race.
+
+Fusion stays locked without 2 demons. **Rag's Jewelry** lives in [`/shop`](../shop/).
 
 ## Modes
 
-- **Fusion 2** — race chart, two-parent specials, **Element × Element → Mitama**.
-- **Fusion 3 / 4** — named special recipes.
-- **Reverse** — pick a result, then recipes you can actually make (Mitamas excluded).
-- **Mitama Chamber** — pick the demon, Mitama type, and quantity.
+| Mode | Parents | Resolves |
+| --- | --- | --- |
+| **Fuse 2** | 2 | Race chart **or** 2-parent special **or** Element × Element → Mitama |
+| **Fuse 3 / 4** | 3 or 4 | **Special** recipes only (62 total: 7 of 2, 41 of 3, 14 of 4) |
+| **Reverse** | — | Pick the result; lists recipes you can afford (up to 40 demons, no Mitamas) |
+| **Mitama Chamber** | 1 recipient + Mitamas | Infusion; does **not** create a new species |
 
-Fusion 2 needs two demons. **Rag's Jewelry** is in `/shop`.
+Priority: special → Element Mitama → chart dyad.
 
-## Stars and odds
+## Dyad (chart)
 
-The result’s stars are the **minimum of the parents**. Infusion does **not** create a new species: the recipient stays.
+Internal target level: `floor((lvA + lvB) / 2) + 1`. The child species is the one in the result race with catalog level ≥ target (or the highest). The child is born at the **species base level**, not the parent average. Fresh IVs **0–31** on every stat.
 
-| Tier | Success |
+**37 chart races:** Herald, Megami, Avian, Divine, Yoma, Vile, Raptor, Deity, Wargod, Avatar, Holy, Genma, Fairy, Beast, Jirae, Fiend, Jaki, Wilder, Fury, Lady, Dragon, Kishin, Kunitsu, Femme, Brute, Fallen, Night, Snake, Tyrant, Drake, Haunt, Foul, Enigma, UMA, Qadistu, Devil, Primal.
+
+**Off-chart:** Element, Mitama, King, Panagia. A `-` cell is invalid.
+
+## Element × Element → Mitama
+
+Two **different** Elements. Same Element is invalid. **Dyad** odds (~92%), not 100%.
+
+| Pair | Mitama |
 | --- | --- |
-| Dyad (including Element → Mitama) | High |
-| Special | Medium |
-| Legendary | Low |
-| DLC | Very low |
-| Mitama infusion | **100%** |
+| Aeros + Flaemis | Ara Mitama |
+| Aquans + Erthys | Ara Mitama |
+| Aeros + Erthys | Nigi Mitama |
+| Aeros + Aquans | Kusi Mitama |
+| Erthys + Flaemis | Kusi Mitama |
+| Aquans + Flaemis | Saki Mitama |
 
-A fail still spends macca and **keeps the parents**. An accident consumes them.
+## Stars, odds, and macca
+
+Result stars = **minimum of the parents**. Infusion does **not** change species or stars.
+
+Base cost: `15 + result_level × 10`, times the tier multiplier.
+
+| Tier | Targets | Success | Fail | Accident | × cost |
+| --- | --- | --- | --- | --- | --- |
+| **Dyad** | Chart + Element→Mitama | **92%** | 6% | 2% | ×1 |
+| **Special** | Named recipes | **70%** | 25% | 5% | ×4 |
+| **Legendary** | Masakado, Lucifer, Satan, Beelzebub, Shiva, Zeus, Michael, Samael | **25%** | 70% | 5% | ×8 |
+| **DLC** | Artemis, Cleopatra, Mephisto, Konohana Sakuya, Dagda, Demi-fiend, Demi-fiend A, Nuwa, Nuwa A | **8%** | 90% | 2% | ×15 |
+| **Mitama** | Chamber | **100%** | 0% | 0% | ×1 |
+
+Level 50 example: dyad **515** · special **2,060** · legendary **4,120** · DLC **7,725**.
+
+- **Fail:** spends macca, **parents stay**.
+- **Accident:** spends macca, **parents vanish**; another demon ±15 levels from the target is born. DLC **never** appears in accidents.
+
+DLC and Mitamas **do not spawn**.
+
+## Inheritance
+
+Pool up to **25** skills (species learnset at the result level + parent movesets). You pick up to **8**.
+
+**Do not inherit:** racial innates (~290) and **Magatsuhi** (rank ≥ 50 and cost 0). Teach Magatsuhi later with a card.
 
 ## Mitama Chamber
 
-Mitamas **never spawn** and **cannot join a party or fight**. They show **☯**, not stars. Get them by fusing two different Elements or buying at Rag's, then infuse in the Chamber. Mitamas are **not** fusion parents in Fusion 2 / 3 / 4 or Reverse.
+Mitamas **do not spawn**, **cannot join party/battle**, use **☯** (no stars), and **cannot** be Fuse 2/3/4 or Reverse parents.
 
-Each infusion raises **two stats by 20%** (floor +1) until **2× unbuffed base** (capped at 999). HP and MP are **not** raised by Mitama.
+**Who can receive:** any demon **except** Mitama and Element.
+
+Each infusion: **+20%** on two stats (floor +1) up to **2× combat base** (max **999**). **HP/MP do not rise**.
 
 | Mitama | Stats |
 | --- | --- |
 | Ara | STR + AGI |
-| Nigi | MAG + LUC |
+| Nigi | MAG + LCK |
 | Kusi | VIT + AGI |
-| Saki | VIT + LUC |
+| Saki | VIT + LCK |
 
-Skills only fill **empty slots** (max 8). If you have several of the same Mitama, **Quantity** infuses the stack in one go.
+Skills only fill **empty slots** (max 8). At 8 skills, only stats rise. **Quantity** 1–99 infuses a batch of the same type and stops at the cap.
 
-## Rag's Jewelry
+Paths to a Mitama: fuse Elements, buy at [Rag's](../shop/), farm gems in [Suginami](../farm/).
 
-Buy Elements and Mitamas in `/shop`. See [Shop](../shop/).
+## Catalog
+
+[Every species](../catalog-demons/) · [Every skill](../catalog-skills/)

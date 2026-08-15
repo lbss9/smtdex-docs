@@ -1,20 +1,34 @@
 ---
 title: Demons
-description: Estrelas, inventário, stats 999 / HP-MP 9999 e Mitama.
+description: Estrelas, IVs, potentials, estoque 100 e as 284 espécies.
 ---
 
-Cada demon seu é uma instância: nível, estrelas, moveset, apelido e **bônus Mitama**.
+**284** espécies no catálogo. Cada demon seu é uma instância: nível, estrelas, IVs, moveset, apelido e bônus Mitama.
+
+Lista completa: [catálogo de demons](../catalog-demons/). Skills: [catálogo de skills](../catalog-skills/).
 
 ## Estrelas
 
-1★ a 5★ (💠 lendário). Estrelas multiplicam stats, HP e MP. Na fusão, o resultado herda o **mínimo dos pais**. Infusão Mitama **não** muda as estrelas do receptor.
+1★ a 5★ (💠 lendário). Multiplicam stats/HP/MP: **1,0 / 1,1 / 1,25 / 1,45 / 1,75**. Na fusão, o resultado herda o **mínimo dos pais**. Infusão Mitama **não** muda estrelas.
 
-## Stats
+## Stats e IVs
 
-HP e MP têm teto **9999**. Strength, Magic, Vitality, Agility e Luck têm teto **999**. Dano por golpe, 99999.
+HP/MP teto **9999**. STR/MAG/VIT/AGI/LCK teto **999**. Dano por golpe **99 999**.
 
-Mitama infunde +20% em dois stats até **2× o base**. As próprias Mitamas usam **☯** (sem estrelas) e não entram em party. Ver [Fusão e Mitama](../fusion/) e [Items e gemas](../items/).
+IVs **0–31** por stat (HP, STR, MAG, VIT, AGI, LCK; soma máx. 186). Fusão rola IVs novos.
+
+**Potentials** (−9 a +9) modificam dano, cura, ailment e MP da espécie. **Não** aplicam em Magatsuhi.
+
+Mitama: +20% em dois stats até **2× o base**. Mitamas usam **☯** e não entram em party. Ver [Fusão](../fusion/).
+
+## Resistências e afinidades
+
+14 afinidades: físico + 9 elementos + poison / nerve / panic / charm. Valores: weak, neutral, resist, null, repel, drain. Affinities numéricas no catálogo empurram o poder da skill.
 
 ## Inventário
 
-`/inventory` lista a coleção (teto 100). `/info` consulta a espécie ou uma instância sua.
+Teto **100** (mail pendente não conta). `/inventory` lista, detalha, exclui. Expedição trava exclusão e learn. `/info` consulta a espécie ou a instância.
+
+## O que não spawnam
+
+DLC (Artemis, Cleopatra, Mephisto, Konohana Sakuya, Dagda, Demi-fiend, Demi-fiend A, Nuwa, Nuwa A), Mitamas, e specials de **3+ pais**. Elements **spawnam**.

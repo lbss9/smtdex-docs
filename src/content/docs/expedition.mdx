@@ -1,20 +1,32 @@
 ---
 title: Expedition
-description: Amala Labyrinth, five Kalpas, the whole compendium travels.
+description: Amala Labyrinth, five Kalpas, roster power, and loot.
 ---
 
-`/battle` → PvE → **Expedition**. Your **entire roster** (favorites included; pending mail excluded) enters the Amala Labyrinth. It is not turn combat: the bot scores roster power, waits out the clock, and posts the result in the channel.
+`/battle` → PvE → **Expedition** → destination → confirm.
+
+The **entire free roster** (not mail) enters the Amala Labyrinth. This is not a turn fight: the bot measures power, waits out the clock, and returns the result. Power = sum of level × rarity × IVs of free demons at send time.
 
 ## Kalpas
 
-| Destination | Time | Power | Macca | XP/demon |
-| --- | --- | --- | --- | --- |
-| Kalpa I | 30 min | 720 | 800 | 2,200 |
-| Kalpa II | 1 h | 1,800 | 1,600 | 3,600 |
-| Kalpa III | 2 h | 4,200 | 3,200 | 5,800 |
-| Kalpa IV | 4 h | 9,000 | 6,400 | 9,200 |
-| Kalpa V | 8 h | 18,000 | 12,000 | 14,000 |
+| Destination | Time | Lv+ | ★ | Power | Macca | XP/demon | Items | Cards | Min sell |
+| --- | --- | ---: | --- | ---: | ---: | ---: | --- | --- | ---: |
+| I — Vestibule | 30 min | 50 | ★★–★★★ | 720 | 800 | 2,200 | 12–16 | 8–12 | 50,000 |
+| II — Magatsu Corridors | 1 h | 60 | ★★★ | 1,800 | 1,600 | 3,600 | 16–20 | 12–16 | 80,000 |
+| III — Warden Circle | 2 h | 70 | ★★★–★★★★ | 4,200 | 3,200 | 5,800 | 20–24 | 16–20 | 120,000 |
+| IV — Kagutsuchi Throne | 4 h | 80 | ★★★★ | 9,000 | 6,400 | 9,200 | 24–30 | 20–24 | 180,000 |
+| V — Creation Core | 8 h | 90 | 💠 | 18,000 | 12,000 | 14,000 | 28–36 | 24–30 | 280,000 |
 
-Power ≥ 100% of the requirement → success (XP, items, Skill Cards, macca). 50–99% → fail, no loot. Below 50% → **collapse** at half the timer.
+| Power / requirement | Outcome |
+| --- | --- |
+| ≥ **100%** | Success — full loot |
+| **50–99%** | Fail at the end — **no loot** |
+| **&lt; 50%** | **Collapse** at **half** time — roster freed, no loot |
 
-While a run is going, fusion, party, PvE/PvP, and spawn fights are locked. Name-capture on spawns **still works**.
+**Never drops:** Magatsuhi cards, Soma, Masakado Crest, Shard/Crystal.
+
+## What locks
+
+Fusion, party, PvE/PvP, spawn **Battle**, delete/learn on run demons, mailing demons, chat XP/macca. **Name capture still works**; the new demon does **not** join the run.
+
+`/battle` during a run: *"Your demons are in the Amala Labyrinth."*

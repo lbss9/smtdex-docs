@@ -1,0 +1,123 @@
+---
+title: Onde farmar
+description: Onde conseguir macca, XP, gemas, Mitamas, Skill Cards, Magatsuhi e cada item.
+---
+
+Guia de rotas. Números vêm do bot **2.7.0**.
+
+## Atalho
+
+| Quero | Melhor rota |
+| --- | --- |
+| **Jade e gemas da cor** | Exploração → [Túneis de Suginami](../exploration/) (Superfície já serve) + spawn de Elements |
+| **Mitama** | Suginami → fundir 2 Elements **ou** [Rag's](../shop/) → [Câmara](../fusion/) |
+| **Macca rápida** | Chat (+10 / 60 s) + vender loot de [Expedição](../expedition/) |
+| **XP passivo** | Expedição Kalpa alta (até 14 000 XP por demon) |
+| **XP ativo** | [Arena](../battles/) contra party forte |
+| **Skill Cards comuns** | Boss de exploração (Abismo) + Expedição |
+| **Card Magatsuhi** | **Só** Rag's Jewelry, aba Magatsuhi, **Jade** |
+| **Candelabro** | [Salão Infernal](../infernal-hall/) (refarm) |
+| **Renome rank 5 da loja** | 2 500 — clears de exploração + vitórias de spawn |
+| **Incenso / Crest** | Chefes endgame (Masakado, Lucifer, Satan, Beelzebub) — **4%** |
+| **Shard Magatsuhi** | Loja rank 3 **ou** unique Haunt / Jaki (**18%**) |
+| **Crystal Magatsuhi** | **Só loja** rank 5 (2 500 Renome) |
+
+## Macca
+
+| Fonte | Quanto | Como |
+| --- | --- | --- |
+| Vitória Arena / spawn / Salão | `nível_inimigo × 7` somado | `/battle` |
+| Exploração | A mesma fórmula × **28% / 40% / 55%** (Superfície / Penumbra / Abismo); boss **×1,35** | `/battle` → PvE → Exploração |
+| Captura por nome | `floor((12 + nv×2 + ★×12) × 0,8)` | Digite o nome no spawn |
+| Chat | **+10** | 1 mensagem a cada **60 s** |
+| Expedição sucesso | 800 / 1 600 / 3 200 / 6 400 / 12 000 | Kalpa I–V |
+| Vender | `sell × quantidade` | `/shop` → Vender |
+
+Captura nv 2 ★1 ≈ **22**. Captura nv 40 ★3 ≈ **102**. Um inimigo nv 50 na Arena = **350**.
+
+## XP
+
+Curva: `50 × (nível − 1)²` até **99**. Uma batalha sobe no máximo **+8** níveis.
+
+Por inimigo, **cada** membro da party ganha `nível_inimigo × 8` com multiplicador `1,15` pela diferença de nível (clamp −10…+10) e catch-up se o inimigo estiver 11+ níveis acima (até ×3,2).
+
+| Fonte | XP |
+| --- | --- |
+| Arena / spawn / Salão | Fórmula cheia |
+| Exploração | Fórmula × 28% / 40% / 55% |
+| Chat | **+20** em **todos** os demons (60 s) |
+| Expedição sucesso | 2 200 / 3 600 / 5 800 / 9 200 / 14 000 **por demon** |
+
+## Renome
+
+Teto **1 000 000**. Loja de items: rank 1 em **0**, 2 em **50**, 3 em **200**, 4 em **800**, 5 em **2 500**.
+
+| Ação | Renome |
+| --- | --- |
+| Vitória PvE / Salão | **3** + `floor(nv/25)` |
+| Vitória spawn | **5** + bônus |
+| Vitória PvP | **4** + bônus |
+| Derrota | **1** |
+| Captura | **2** |
+| Fusão sucesso / acidente / falha | **6 / 2 / 1** |
+| Sala de exploração | **+1** |
+| Clear Superfície / Penumbra / Abismo | **+8 / +12 / +18** |
+
+## Gemas (Jade, Ruby, Amethyst, Opal, Sapphire)
+
+Unique drop **18%** quando o inimigo bate com o nome ou a raça.
+
+| Gema | Vem de | Venda | Serve para |
+| --- | --- | --- | --- |
+| **Jade** | Qualquer **Element** | 250 | Toda compra da Rag's |
+| **Ruby** | **Flaemis** e raça Dragon | 400 | Ara Mitama |
+| **Amethyst** | **Aeros** | 400 | Nigi Mitama |
+| **Opal** | **Erthys** | 400 | Kusi Mitama |
+| **Sapphire** | **Aquans**, Snake, Aqua | 400 | Saki Mitama |
+
+Farm principal: **Túneis de Suginami** (aberto desde o início, 5 salas, os 4 Elements no pool). Superfície já dropa. Elements também spawnam no selvagem. **Mitamas nunca spawnam.**
+
+Não venda gema se ainda precisa de Mitama — 250–400 macca perde para a infusão.
+
+## Elements e Mitamas
+
+Três caminhos:
+
+1. **Fusão 2** — dois Elements **diferentes** (dyad ~92%). Pares: Aeros+Flaemis / Aquans+Erthys → Ara; Aeros+Erthys → Nigi; Aeros+Aquans / Erthys+Flaemis → Kusi; Aquans+Flaemis → Saki.
+2. **Rag's** (`/shop`) — Element 1 Jade ou 5 000; Mitama 1 Jade + 1 da cor ou 10 000; Premium 3 Jade + 2 da cor ou 20 000.
+3. **Câmara** (`/fuse`) — escolhe o demon, o tipo e a quantidade. **100%**. +20% em dois stats até 2× o base (máx. 999). HP/MP não sobem.
+
+Mitamas **não** entram em party, batalha, Fusão 2/3/4 nem Reverso.
+
+## Skill Cards
+
+| Fonte | O que cai |
+| --- | --- |
+| Boss de exploração | Até 4 slots; Superfície rank ≤8, Penumbra ≤16, Abismo ≤28 |
+| Expedição | 8–30 cards (Kalpa I–V), rank **&lt; 50** |
+| Mail System | Qualquer card (dashboard) |
+| **Rag's Magatsuhi** | **Todas** as Magatsuhi ativas, só Jade |
+
+**Nunca dropa de loot:** Magatsuhi (rank 50), Soma, Masakado Crest, Shard/Crystal.
+
+Aprenda no `/inventory` → Skill Cards. **Qualquer demon** aprende qualquer Magatsuhi.
+
+## Items de cura e Magatsuhi
+
+| Item | Onde | Nota |
+| --- | --- | --- |
+| Medicine / Life Stone / Chakra Drop | Loja rank 1 + drop | Farm barato |
+| Magatsuhi Shard (+40) | Loja rank 3 (2 500) **ou** Haunt/Jaki 18% | Enche a barra |
+| Magatsuhi Crystal (cheio) | **Só loja** rank 5 (20 000) | Não dropa |
+| Bead / Soma / Bead of Life | Loja alta | Soma e Bead of Life **não** dropam |
+| Strength / Magic Incense | **Não** na loja | 4% em Masakado, Lucifer, Satan, Beelzebub |
+
+## Exploração vs Expedição vs Arena
+
+- **Suginami Superfície** — gemas no começo do jogo, 5 salas curtas.
+- **Abismo** dos túneis altos — Skill Cards melhores e mais loot por sala.
+- **Expedição** — deixe o roster inteiro no timer (30 min–8 h). Precisa de **poder ≥ 100%** do Kalpa ou volta sem loot. Trava party, fusão e chat XP.
+- **Arena** — XP/macca cheios, 1 luta, +Renome.
+- **Spawn Batalhar** — captura o boss + loot + mais Renome que Arena.
+
+Detalhes de cada túnel e Kalpa: [Exploração](../exploration/), [Expedição](../expedition/).

@@ -1,34 +1,68 @@
 ---
 title: Shop
-description: Buy items, sell the bag, and Rag's Jewelry.
+description: Buy items, sell the bag, Rag's Jewelry, and Magatsuhi.
 ---
 
-`/shop` opens **Buy**, **Sell**, **Rag's Jewelry**, and **Close**. The item catalog is everything unlocked by your Renown rank (not a daily roll). Rank 1 at 0; rank 2 at 50; rank 3 at 200; rank 4 at 800; rank 5 at 2,500.
+`/shop` opens **Buy**, **Sell**, **Rag's Jewelry**, and **Close**. The item catalog follows your **Renown rank** (not a daily roll).
 
-**Skill Cards are not sold in the shop.** They come from expeditions, exploration, and mail.
+| Shop rank | Renown |
+| --- | ---: |
+| 1 | 0 |
+| 2 | 50 |
+| 3 | 200 |
+| 4 | 800 |
+| 5 | 2,500 |
+
+Normal Skill Cards are **not** sold in the item store — they come from [exploration](../exploration/), [expedition](../expedition/), and mail. **Magatsuhi** is sold at Rag's.
+
+Full list: [item catalog](../catalog-items/).
 
 ## Buy
 
-Pick a type (Heal, Revive, Support, …), an item, then **Buy** and type quantity 1–99. **Search** filters the list by name. Stack size caps the purchase.
+1. Pick a type: Heal, Revive, Status, Support, Dampeners, Attack, Magatsuhi (Shard/Crystal), Sell.
+2. **Search** filters by name.
+3. **Buy** asks for quantity **1–99**, capped by `maxStack` (Medicine max 50).
+4. Price = `buy × quantity`.
+
+Rank highlights: rank 1 Medicine/Life Stone; rank 3 **Magatsuhi Shard** (2,500) and Revival Bead; rank 5 Soma, Bead of Life, and **Magatsuhi Crystal** (20,000). Incense is **not** in the shop.
 
 ## Sell
 
-- **Sell** — quantity 1–99 of the selected item.
-- **Sell category** — the entire stack of that category (no 99 cap).
-- **Sell all** — every sellable item in the bag.
+- **Sell** — 1–99 of the selected item.
+- **Sell category** — the whole stack in that category (no 99 cap).
+- **Sell all** — the entire sellable bag.
 
-Category and All ask you to **confirm**. Gems and junk are meant to be sold; Rag's gems are worth more as Mitama fuel.
+Category and All ask **Confirm sale**. Rag's gems sell (250–400) but that is a **bad** deal if you still need Mitamas.
 
-## Rag's Jewelry
+## Rag's Jewelry — Demons
 
-Stock on entry: 4 Elements + 4 Mitamas + 1 premium (rotates). Pay with gems **or** macca. **Quantity** 1–99, capped by roster space and wallet.
+Stock on enter: **4 Elements + 4 Mitamas + 1 premium** (premium **rolls**). Pay with gems **or** macca. Quantity 1–99, limited by roster room (**100**) and wallet.
 
 | Offer | Gems | Macca |
-| --- | --- | --- |
+| --- | --- | ---: |
 | Element | 1 Jade | 5,000 |
 | Mitama | 1 Jade + 1 color gem | 10,000 |
 | Premium | 3 Jade + 2 color | 20,000 |
 
-Colors: Ara Ruby, Nigi Amethyst, Kusi Opal, Saki Sapphire.
+Colors: Ara **Ruby**, Nigi **Amethyst**, Kusi **Opal**, Saki **Sapphire**. Farm: [Suginami](../farm/).
 
-The shop is private. Use **Close**, or let it idle for one minute.
+## Rag's Jewelry — Magatsuhi
+
+**Magatsuhi** tab. **Every** **active** Magatsuhi (54). Unique Miracle passives are **not** sold.
+
+- **Jade only.** Macca **cannot** buy Magatsuhi.
+- Shop rank **1–5** (skill power, not Renown): **3 / 4 / 6 / 8 / 12** Jade.
+- Search and pages of 25.
+- The card lands in Skill Cards. **Any demon** learns it in `/inventory`.
+
+| Rank | Jade | Examples |
+| ---: | ---: | --- |
+| 1 | 3 | Omagatoki: Luck, light support |
+| 2 | 4 | Hit, Dekajaon, low damage |
+| 3 | 6 | Charge, Free, Fairy Banquet |
+| 4 | 8 | Critical, Pierce, Savage, Eternal Prayer, Big Bang |
+| 5 | 12 | Freikugel EX, Twilight Wave |
+
+Full list: [skill catalog](../catalog-skills/#magatsuhi-shop-list).
+
+The shop is private. **Close** or 1 idle minute ends it.

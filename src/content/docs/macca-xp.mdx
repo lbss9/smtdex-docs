@@ -1,22 +1,59 @@
 ---
 title: Macca, XP & Renown
-description: Fight rewards, shop ranks, and titles.
+description: Reward formulas, shop ranks, and titles.
 ---
 
-Macca is the currency. Check `/balance`. You start with 500 from `/start`.
+Macca is the currency. `/profile` and `/balance` are the same panel: macca, MAG, Renown, W/L, demons **X/100**. You start with **500** from `/start`.
 
-## Where macca comes from
+Practical routes: [where to farm](../farm/).
 
-Arena, fight spawns, exploration, successful expeditions, shop sales, mail. **Not** from chat.
+## Macca
 
-You spend it on fusion, Rag's Jewelry (expensive), and `/shop`.
+| Source | Formula |
+| --- | --- |
+| Arena / fight spawn / Hall | `Σ enemy_level × 7` |
+| Exploration | Same × **28% / 40% / 55%**; boss ×1.35 |
+| Name capture | `floor((12 + lv×2 + ★×12) × 0.8)` |
+| Chat | **+10** every **60 s** |
+| Expedition success | 800 / 1,600 / 3,200 / 6,400 / 12,000 |
+| Sell | `sell × qty` |
+
+Spend it on fusion, Rag's (gems or macca), and `/shop`.
 
 ## XP
 
-Only **Arena**, **fight spawns**, **exploration**, and successful **expeditions** grant XP. Duelo and Confisco do not.
+SMT V curve: total XP for level L = `50 × (L − 1)²`. Cap **99**. One battle grants at most **+8** levels.
 
-The curve is SMT V’s: `level × 8 × 1.15ⁿ` per enemy, `n` clamped −10 to +10. Macca from those fights is `level × 12` per enemy (Arena/spawn). Exploration pays a fraction of that.
+Per enemy, **each** member: `lv×8 × 1.15^diff × catchup`, `diff` between −10 and +10. Catch-up if the enemy is 11+ levels higher (up to ×3.2).
+
+| Source | XP |
+| --- | --- |
+| Arena / spawn / Hall | Full formula |
+| Exploration | Formula × 28% / 40% / 55% |
+| Chat | **+20** on **every** demon / 60 s |
+| Expedition success | 2,200–14,000 per demon |
+| Duel / Confiscation | **0** |
 
 ## Renown
 
-It only goes up, to 1,000,000. The shop reads item rank (1–5; rank 5 at 2,500 Renown). `/profile` titles keep climbing after that.
+Only goes up, cap **1,000,000**. The item shop locks rank 5 at **2,500**. `/profile` titles keep climbing after that.
+
+| Shop rank | Renown |
+| ---: | ---: |
+| 1 | 0 |
+| 2 | 50 |
+| 3 | 200 |
+| 4 | 800 |
+| 5 | 2,500 |
+
+| Action | Renown |
+| --- | ---: |
+| PvE / Hall win | 3 + floor(lv/25) |
+| Spawn win | 5 + bonus |
+| PvP win | 4 + bonus |
+| Loss | 1 |
+| Capture | 2 |
+| Fusion success / accident / fail | 6 / 2 / 1 |
+| Exploration room / clear | +1 / +8 / +12 / +18 |
+
+Sample titles: Wanderer (0) → Beginner (15) → Medium (80) → Nahobino (1100) → Magatsuhi (3100) → Apex (1M).

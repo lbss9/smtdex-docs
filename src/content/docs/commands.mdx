@@ -1,20 +1,22 @@
 ---
 title: Commands
-description: Every slash command in SMTDex.
+description: Every SMTDex 2.7.0 slash command.
 ---
 
-Private menus include **Fechar** and close after one idle minute unless noted.
+Private menus include **Close** and time out after **one idle minute**, except Confiscation (90 s).
 
-| Command | Description |
+| Command | What it does |
 | --- | --- |
-| `/start` | Claim a starter demon and 500 macca (once). |
-| `/battle` | Arena, Exploration, Expedition, Infernal Hall, Duelo, or Confisco. |
-| `/party` | Parties of up to four demons. Mitamas cannot join. |
-| `/inventory` | Items, demons, and Skill Cards. Replaces `/compendium`. **Search** by name. |
-| `/info` | Catalog or an owned demon (attributes cap 999, HP/MP 9,999). |
-| `/fuse` | Fusion 2 / 3 / 4, reverse, and Mitama Chamber. Filter and search the parent list. |
-| `/moon` | Moon phase and spawn odds. |
-| `/mail` | Inbox, sent, compose. Optional PayIn. **Receber todos** claims free mail only. |
-| `/shop` | Items, Rag's Jewelry, and sell category / sell all. **Search** by name. |
-| `/balance` | Macca, collection size, highest level. |
-| `/profile` | Renown title, public Ref, W/L. |
+| `/start` | Starter + 500 macca (once). Pixie, Slime, Onmoraki, Cait Sith, Angel. |
+| `/battle` | PvE: Arena, Exploration, Expedition, Infernal Hall. PvP: Duel, Confiscation. Manual or auto. |
+| `/party` | Up to 4 demons. Create, edit, delete. No Mitamas. |
+| `/inventory` | Items (Common / Valuables / Talisman / Skill Cards) and demons. Search. Learn. Use Shard/Crystal. |
+| `/info` | Catalog species **or** your instance (IVs, Mitama, moveset). |
+| `/fuse` | Fuse 2 / 3 / 4, Reverse, Mitama Chamber. Filter and search. |
+| `/shop` | Buy items, sell, Rag's (Demons + **Magatsuhi**). Search. |
+| `/moon` | Moon phase and odds. `/moon demon:Name` for one species. |
+| `/mail` | Inbox, sent, compose, PayIn. **Claim all** only takes free mail. |
+| `/profile` | Title, Ref, Renown, macca, MAG, W/L, demons X/100. |
+| `/balance` | **The same panel** as `/profile`. |
+
+`/compendium`, `/lua`, `/sacrifice`, and `/trade` no longer exist.

@@ -1,33 +1,95 @@
 ---
 title: Party e batalhas
-description: Arena, Duelo, Confisco, Exploração, Expedição e Salão Infernal.
+description: Press Turn, Arena, PvP, lua, XP, macca e como lutar.
 ---
 
-Uma party tem até **quatro** demons. Crie e edite com `/party`. **Mitamas não entram em party nem em batalha.** STR / MAG / VIT / AGI / LCK têm teto **999**. HP e MP têm teto **9999**. Dano por golpe, 99999.
+Uma party tem até **quatro** demons (`/party`). Mínimo 1. Nome até 64 caracteres. **Mitamas não entram em party nem em batalha.** Expedição ativa **trava** a party.
 
-O select de skill mostra o texto do catálogo (o que a skill faz) e o custo.
+Caps: STR/MAG/VIT/AGI/LCK **999** · HP/MP **9999** · dano por golpe **99 999** · fases **60** (empate).
+
+O select de skill mostra a descrição do catálogo e o custo. Magatsuhi só aparece com a barra cheia (`MAG`).
 
 ## `/battle`
 
-Menu privado: **PvE** ou **PvP**.
+1. `/battle` (efêmero). Expedição ativa bloqueia.
+2. **PvE** ou **PvP**.
+3. Quase todo modo pergunta **Controlar party** ou **Batalha automática**.
+4. Timeout dos menus: **60 s**. Confisco confirma em **90 s**.
 
-PvE: **Arena**, **Exploração**, **Expedição**, **Salão Infernal**.  
-PvP: **Duelo** (parties) ou **Confisco** (um demon; o perdedor perde).
+```
+/battle
+ ├─ PvE
+ │   ├─ Arena
+ │   ├─ Exploração
+ │   ├─ Expedição
+ │   └─ Salão Infernal
+ └─ PvP
+     ├─ Duelo
+     └─ Confisco
+```
 
-Use **Fechar**. Menus ociosos fecham em um minuto. Confisco pede confirmação dupla (90 s).
+## Press Turn
+
+Cada fase: **1 ícone por aliado vivo**. Ordem: **Agilidade**. Iniciativa: AGI média maior.
+
+| Resultado | Ícones |
+| --- | --- |
+| Normal / Pass / Guard | Consome **1** |
+| Weak ou crítico | ● vira ◐ (turno extra) |
+| Miss ou Null | Consome **2** |
+| Repel ou Drain | **Zera todos** |
+| Magatsuhi | **Não consome**; o mesmo demon age de novo |
+
+Afinidades: Resist ×0,5 · Neutro ×1 · Weak ×1,25 · Severe Weak ×3 · Null 0 · Repel reflete · Drain cura o alvo.
+
+**Guard** reduz dano recebido para **×0,8**. **Passar** gasta 1 ícone. Timeout sem ação = Passar.
+
+Crítico: `5% + (LCK atk − LCK def)×0,4% + (nv atk − nv def)×0,2%`, entre **2% e 85%**. Crítico soma +0,5 no multiplicador.
+
+## Dificuldade PvE (ameaça)
+
+| Ameaça | Dificuldade | Seu dano | Dano inimigo |
+| --- | --- | --- | --- |
+| ≤3★ | Normal | ×1 | ×1 |
+| 4★ | Hard | ×0,7 | ×1,35 |
+| 5★ | Merciless | ×0,4 | ×1,7 |
 
 ## Arena
 
-Jogador contra o ambiente. Depois da party, você controla os turnos ou deixa no automático. Vencer dá XP e macca. Spawns selvagens de luta funcionam igual. A Arena **equilibra** nível/estrelas com a party.
+`/battle` → PvE → Arena → party → manual/auto. Party selvagem do **mesmo tamanho**, nivelada e equalizada (piso **85%** da média da party). Lua aplica HP/dano nos inimigos.
+
+**Vitória:** XP (cada membro) + macca (`Σ nv×7`) + drops (42%) + **+3 Renome** (+ `floor(nv/25)`).  
+**Derrota / empate 60 fases:** sem loot, **+1 Renome**.
+
+## Exploração / Expedição / Salão
+
+Ver [Exploração](../exploration/), [Expedição](../expedition/), [Salão Infernal](../infernal-hall/). Exploração **não** equaliza — inimigos entram no nível do catálogo. HP/MP resetam entre salas.
 
 ## Duelo
 
-PvP com parties. Ninguém perde demons. Sem XP nem macca.
+PvP party vs party. Sem aposta, sem transferência. **+4 / +1** Renome. Sem XP/macca PvE.
 
 ## Confisco
 
-PvP com **um demon cada**. O perdedor **perde esse demon**. Os dois confirmam. Único modo que confisca.
+PvP **1 demon cada** (Mitama fora). Os dois confirmam. O perdedor **perde o demon**. Empate (60 fases): ninguém perde.
 
-## Magatsuhi
+## Lua (`/moon`)
 
-Barra 0–100 da party. Enche no combate; skills Magatsuhi (rank 50) aparecem no select quando está cheia e drenam a barra inteira sem gastar Press Turn. Ver [Magatsuhi](../magatsuhi/).
+`/moon` mostra a fase e as odds. `/moon demon:Nome` a chance da espécie.
+
+| Boost | Janela | HP inimigo | Dano inimigo |
+| --- | --- | --- | --- |
+| peak | ≤36 h da nova/cheia | ×1,22 | ×1,15 |
+| high | ≤72 h | ×1,12 | ×1,08 |
+| mild | ≤24 h do quarto | ×1,08 | ×1,04 |
+| none | resto | ×1 | ×1 |
+
+Peak/high também empurram ★4/★5 no spawn. Fim de semana (Brasil) ×2,2 / ×2,8 em 4★/5★. Lua **não** muda túneis nem o Salão.
+
+## XP e macca de luta
+
+XP por inimigo, **por membro**: `nv×8` × `1,15^diff` (diff −10…+10) × catch-up. Máx. **+8** níveis por batalha. Curva `50×(L−1)²` até 99.
+
+Macca: `Σ nv×7` (exploração aplica 28%/40%/55%). Chat: +10 macca e +20 XP / 60 s.
+
+Rotas: [onde farmar](../farm/). Magatsuhi: [Magatsuhi](../magatsuhi/).

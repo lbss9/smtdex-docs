@@ -1,12 +1,61 @@
 ---
 title: Magatsuhi
-description: Party gauge 0–100 and Omagatoki skills.
+description: 0–100 gauge, Omagatoki, how to buy and how to use.
 ---
 
-A **0–100** gauge shared by the party, persistent between fights.
+A **0–100** **party** gauge that persists between fights. Shown on the battle embed and `/profile`.
 
-It fills in combat (end of turn, weakness/crit, damage taken, KO). Magatsuhi Shard/Crystal items also fill it.
+## How it fills
 
-When full, Magatsuhi skills (rank 50) appear in the skill select (cost `MAG`). Using one **drains the whole bar**, spends no HP/MP, and **does not consume a Press Turn** — the same demon acts again.
+| Event | Gain |
+| --- | ---: |
+| End of your party's turn | **+18** |
+| Weakness or crit | **+8** |
+| Damage taken | **+6** |
+| KO dealt | **+10** |
+| Magatsuhi Shard | **+40** |
+| Magatsuhi Crystal | **100** (full) |
 
-Omagatoki auras (Critical, Pierce, Charge, Hit, Dance, Free, Savage, Potential, Adversity, Doubler, Exploit, Momentum, Conserve, Shield of God) last until the start of that side’s next turn.
+Shard: shop rank 3 (2,500 macca) or Haunt/Jaki unique **18%**. Crystal: **shop only**, rank 5 (20,000). Routes: [where to farm](../farm/).
+
+## How to use in battle
+
+1. The demon must have the Magatsuhi skill on its moveset (rank 50).
+2. The gauge must be **full (100)**. Otherwise the skill **vanishes** from the select.
+3. When full it appears with cost **MAG**.
+4. Using it **empties the bar**, **costs no HP/MP**, and **does not spend a Press Turn** — the same demon acts again.
+
+Skill Potential does **not** apply to Magatsuhi.
+
+## How to get the skill
+
+Buy the card at [Rag's Jewelry](../shop/) → **Magatsuhi** tab → **Jade only** (3 / 4 / 6 / 8 / 12 by skill rank). Teach it to **any demon** in `/inventory`.
+
+Fusion does **not** inherit Magatsuhi. Exploration and expedition **never** drop Magatsuhi cards.
+
+Full list: [skill catalog](../catalog-skills/#magatsuhi-shop-list).
+
+## Omagatoki
+
+Party aura until the **start of the next turn of the same side**. Ward (Shield of God) lasts through the enemy turn.
+
+| Skill | Effect |
+| --- | --- |
+| Critical | Every hit crits (magic included) |
+| Pierce | Pierces resist / null / repel / drain |
+| Charge | Charge on physical / Concentrate on magic |
+| Hit | Accuracy and ailment ×1.25 |
+| Dance | Multi-hit uses the maximum hits |
+| Free | Following skills cost no HP/MP |
+| Savage | Damage ×2 and cost ×2 |
+| Potential | Potential at maximum (+9) |
+| Adversity | More damage at low HP (up to ×1.34) |
+| Doubler | Kaja/Kunda ×2 |
+| Exploit | Extra weakness damage (×1.21) |
+| Momentum | +1 Press Turn icon on KO |
+| Conserve | A normal action spends like a half (weak) |
+| Shield of God | Incoming damage ×0.5 |
+
+Not implemented in combat yet: **Luck**, **Bounty**, **Sincerity**, **Strategize**.
+
+Offense (Big Bang, Freikugel EX, Soul Drain, Holy Wrath, Feline Fury…) uses the normal damage engine. Mapped support: Fairy Banquet (Luster), Rasetsu Feast (Debilitate), Dekajaon, Expand, Bouncy Body, Guardian Angels, Four Heavenly Edicts, Oni Formation, Eternal Prayer, Accursed Poison.

@@ -1,21 +1,31 @@
 ---
 title: Inventário
-description: Items, demons e Skill Cards no /inventory.
+description: Items, demons, Skill Cards e como aprender Magatsuhi.
 ---
 
-`/inventory` substitui `/compendium`. Abre só para você: **Items** | **Demons** | **Fechar**.
+`/inventory` substitui `/compendium`. Só para você: **Items** | **Demons** | **Fechar**. **Buscar** filtra pelo nome. Páginas de **25**.
 
 ## Items
 
-| Aba | O que entra |
+| Aba | Conteúdo |
 | --- | --- |
 | Comum | Cura, revive, status, suporte, dampener, ataque, Magatsuhi |
-| Valiosos | Loot para vender (junk, gems, barras, Candelabros) |
-| Talisman | Selado |
-| Skill Cards | Aprender no demon; paginam de 25 em 25 |
+| Valiosos | `kind: sell` — gemas, junk, candelabros |
+| Talisman | Selado (vazio por enquanto) |
+| Skill Cards | Aprender no demon; Magatsuhi da Rag's entra aqui |
 
-**Usar** só em cura / revive / status / Magatsuhi. Charge, dampeners e gems de ataque são **só batalha**. **Buscar** filtra item, demon e Skill Card pelo nome.
+**Usar** só em cura / revive / status / Magatsuhi. Charge, dampeners e pedras de ataque são **só batalha**.
 
 ## Demons
 
-Lista, detalhe, excluir. Teto **100** (mail pendente não conta). Expedição trava exclusão e learn. Mitamas aparecem com **☯** (sem estrelas) e não entram em party. `/info` mostra stats efetivos (nível, IVs, estrelas, Mitama): atributos até **999**, HP/MP até **9999**.
+Lista, detalhe, excluir. Teto **100** (mail pendente não conta). Expedição trava exclusão e learn. Mitamas: **☯**, sem estrelas, fora da party. `/info` mostra nível, IVs, estrelas e Mitama.
+
+## Aprender skills
+
+1. Aba **Skill Cards** → card → demon.
+2. **Qualquer demon** aprende qualquer Magatsuhi.
+3. O card **some**.
+4. Moveset cheio (**8**): escolha o slot para trocar.
+5. Demon em expedição não aprende.
+
+Catálogos: [demons](../catalog-demons/), [skills](../catalog-skills/), [items](../catalog-items/).

@@ -37,6 +37,16 @@ export default defineConfig({
               slug: 'getting-started',
             },
             {
+              label: 'Where to farm',
+              translations: { 'pt-BR': 'Onde farmar' },
+              slug: 'farm',
+            },
+            {
+              label: 'Commands',
+              translations: { 'pt-BR': 'Comandos' },
+              slug: 'commands',
+            },
+            {
               label: 'Spawns',
               translations: { 'pt-BR': 'Spawns' },
               slug: 'spawns',
@@ -45,6 +55,11 @@ export default defineConfig({
               label: 'Demons',
               translations: { 'pt-BR': 'Demons' },
               slug: 'demons',
+            },
+            {
+              label: 'Skills',
+              translations: { 'pt-BR': 'Skills' },
+              slug: 'skills',
             },
             {
               label: 'Inventory',
@@ -102,14 +117,30 @@ export default defineConfig({
               slug: 'macca-xp',
             },
             {
-              label: 'Commands',
-              translations: { 'pt-BR': 'Comandos' },
-              slug: 'commands',
-            },
-            {
               label: 'Changelog',
               translations: { 'pt-BR': 'Changelog' },
               slug: 'changelog',
+            },
+          ],
+        },
+        {
+          label: 'Catalogs',
+          translations: { 'pt-BR': 'Catálogos' },
+          items: [
+            {
+              label: 'All demons',
+              translations: { 'pt-BR': 'Todos os demons' },
+              slug: 'catalog-demons',
+            },
+            {
+              label: 'All skills',
+              translations: { 'pt-BR': 'Todas as skills' },
+              slug: 'catalog-skills',
+            },
+            {
+              label: 'All items',
+              translations: { 'pt-BR': 'Todos os items' },
+              slug: 'catalog-items',
             },
           ],
         },

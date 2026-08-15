@@ -1,22 +1,59 @@
 ---
 title: Macca, XP e Renome
-description: Recompensas de luta, loja por rank e títulos.
+description: Fórmulas de recompensa, loja por rank e títulos.
 ---
 
-Macca é a moeda. Veja o saldo com `/balance`. Você começa com 500 no `/start`.
+Macca é a moeda. `/profile` e `/balance` são o mesmo painel: macca, MAG, Renome, W/L, demons **X/100**. Você começa com **500** no `/start`.
 
-## De onde vem a macca
+Rotas práticas: [onde farmar](../farm/).
 
-Arena, spawn de luta, exploração, expedição (sucesso), venda na loja, mail. **Não** vem do chat.
+## Macca
 
-Gasta-se em fusão, Rag's Jewelry (caro) e `/shop`.
+| Fonte | Fórmula |
+| --- | --- |
+| Arena / spawn luta / Salão | `Σ nível_inimigo × 7` |
+| Exploração | A mesma × **28% / 40% / 55%**; boss ×1,35 |
+| Captura por nome | `floor((12 + nv×2 + ★×12) × 0,8)` |
+| Chat | **+10** a cada **60 s** |
+| Expedição sucesso | 800 / 1 600 / 3 200 / 6 400 / 12 000 |
+| Venda | `sell × qty` |
+
+Gasta-se em fusão, Rag's (gemas ou macca) e `/shop`.
 
 ## XP
 
-Só **Arena**, **spawn de luta**, **exploração** e **expedição** (sucesso) dão XP. Duelo e Confisco não pagam.
+Curva SMT V: XP total para o nível L = `50 × (L − 1)²`. Teto **99**. Uma batalha sobe no máximo **+8** níveis.
 
-A curva é a de SMT V: `nível × 8 × 1,15ⁿ` por inimigo, `n` limitado entre −10 e +10. Macca dessas lutas: `nível × 12` por inimigo (Arena/spawn). Exploração paga uma fração disso.
+Por inimigo, **cada** membro: `nv×8 × 1,15^diff × catchup`, `diff` entre −10 e +10. Catch-up se o inimigo estiver 11+ níveis acima (até ×3,2).
+
+| Fonte | XP |
+| --- | --- |
+| Arena / spawn / Salão | Fórmula cheia |
+| Exploração | Fórmula × 28% / 40% / 55% |
+| Chat | **+20** em **todos** os demons / 60 s |
+| Expedição sucesso | 2 200–14 000 por demon |
+| Duelo / Confisco | **0** |
 
 ## Renome
 
-Sobe só, até 1 000 000. A loja lê o rank de item (1–5; rank 5 em 2500 Renome). Títulos no `/profile` continuam subindo depois disso.
+Sobe só, teto **1 000 000**. A loja de items trava o rank 5 em **2 500**. Títulos no `/profile` continuam depois.
+
+| Rank loja | Renome |
+| ---: | ---: |
+| 1 | 0 |
+| 2 | 50 |
+| 3 | 200 |
+| 4 | 800 |
+| 5 | 2 500 |
+
+| Ação | Renome |
+| --- | ---: |
+| Vitória PvE / Salão | 3 + floor(nv/25) |
+| Vitória spawn | 5 + bônus |
+| Vitória PvP | 4 + bônus |
+| Derrota | 1 |
+| Captura | 2 |
+| Fusão sucesso / acidente / falha | 6 / 2 / 1 |
+| Sala / clear exploração | +1 / +8 / +12 / +18 |
+
+Títulos (exemplos): Errante (0) → Iniciante (15) → Médium (80) → Nahobino (1100) → Magatsuhi (3100) → Ápice (1M).
