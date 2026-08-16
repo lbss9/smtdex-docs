@@ -62,6 +62,11 @@ export default defineConfig({
               slug: 'skills',
             },
             {
+              label: 'Skill Cards',
+              translations: { 'pt-BR': 'Skill Cards' },
+              slug: 'skill-cards',
+            },
+            {
               label: 'Inventory',
               translations: { 'pt-BR': 'Inventário' },
               slug: 'inventory',

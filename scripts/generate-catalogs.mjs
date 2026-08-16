@@ -9,6 +9,34 @@ const bot = join(root, '..', 'smt-dex-bot', 'data', 'datastore');
 const demons = JSON.parse(readFileSync(join(bot, 'demons.json'), 'utf8'));
 const skills = JSON.parse(readFileSync(join(bot, 'skills.json'), 'utf8'));
 const items = JSON.parse(readFileSync(join(bot, 'items.json'), 'utf8'));
+const hall = JSON.parse(readFileSync(join(bot, 'infernal-hall.json'), 'utf8'));
+
+const extraSignatureOwners = {
+  'Gaea Rage': 'Demi-fiend',
+  'Deadly Fury': 'Demi-fiend',
+  'Chaotic Will': 'Demi-fiend',
+};
+const rankByName = new Map(skills.map((skill) => [skill.name, skill.rank]));
+const signatureOwners = new Map(Object.entries(extraSignatureOwners));
+for (const floor of hall.floors ?? []) {
+  for (const name of floor.signatureSkills ?? []) {
+    if ((rankByName.get(name) ?? 0) < 99) continue;
+    if (!signatureOwners.has(name)) signatureOwners.set(name, floor.demonName);
+  }
+}
+
+const cardSource = (skill, locale) => {
+  const owner = signatureOwners.get(skill.name);
+  if (owner) {
+    return locale === 'pt' ? `Não · só ${owner}` : `No · ${owner} only`;
+  }
+  if (isMagatsuhi(skill) && skill.type !== 'passive') {
+    return locale === 'pt'
+      ? 'Sim · drop + fusão + Rag\'s'
+      : 'Yes · drop + fusion + Rag\'s';
+  }
+  return locale === 'pt' ? 'Sim · drop + fusão' : 'Yes · drop + fusion';
+};
 
 const escape = (value) =>
   String(value ?? '')
@@ -119,8 +147,8 @@ for (const skill of skills) {
 const skillTables = (locale) => {
   const headers =
     locale === 'pt'
-      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo | Efeito |'
-      : '| Name | Element | Cost | Power | Rank | Target | Effect |';
+      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo | Card | Efeito |'
+      : '| Name | Element | Cost | Power | Rank | Target | Card | Effect |';
   const typeLabel = {
     physical: locale === 'pt' ? 'Físico' : 'Physical',
     magical: locale === 'pt' ? 'Mágico' : 'Magical',
@@ -147,10 +175,10 @@ const skillTables = (locale) => {
       .map((skill) => {
         const mag = isMagatsuhi(skill) && skill.type !== 'passive';
         const extra = mag ? ` (MAG R${magatsuhiRank(skill)} · ${jadeByRank[magatsuhiRank(skill)]} Jade)` : '';
-        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} | ${escape(describeSkill(skill, locale))} |`;
+        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} | ${escape(cardSource(skill, locale))} | ${escape(describeSkill(skill, locale))} |`;
       });
     parts.push(
-      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- |\n${rows.join('\n')}\n`,
+      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | --- |\n${rows.join('\n')}\n`,
     );
   }
   return parts.join('\n');
@@ -227,7 +255,7 @@ title: Skill catalog
 description: All ${skills.length} SMTDex skills, including Magatsuhi shop ranks.
 ---
 
-**${skills.length}** skills with effect text. Magatsuhi actives show shop rank and Jade cost at Rag's. Passives with rank 50 are unique miracles — they are **not** sold.
+**${skills.length}** skills with effect text. **Card** says if it drops as a Skill Card (Arena/spawn 50%, 100% on full moon; exploration; expedition; fusion). Signatures stay on the owner. Magatsuhi actives also show shop rank and Jade at Rag's.
 
 ${skillTables('en')}
 
@@ -246,7 +274,7 @@ title: Catálogo de skills
 description: Todas as ${skills.length} skills do SMTDex, com rank Magatsuhi da Rag's.
 ---
 
-**${skills.length}** skills com o efeito de cada uma. Magatsuhi ativas mostram o rank de loja e o custo em Jade. Passivas rank 50 são miracles únicas — **não** se vendem.
+**${skills.length}** skills com o efeito de cada uma. **Card** diz se cai como Skill Card (Arena/spawn 50%, 100% na lua cheia; exploração; expedição; fusão). Assinatura fica no dono. Magatsuhi ativas também mostram rank e Jade da Rag's.
 
 ${skillTables('pt')}
 
