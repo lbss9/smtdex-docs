@@ -1,32 +1,833 @@
 ---
 title: Skill Cards
-description: Quais skills caem como card, onde farmar e quais ficam no dono.
+description: Onde cada Skill Card dropa, e quais assinaturas nunca dropam.
 ---
 
-Toda skill **transferível** — ativa e passiva — existe como Skill Card. **Assinatura** fica no demon: sem card, sem herança na fusão.
-
-Tabela completa: [catálogo de skills](../catalog-skills/) (colunas Card / Fonte).
+Toda skill **transferível** — ativa e passiva — é Skill Card. **Assinatura** fica no dono: sem card, sem herança na fusão.
 
 ## Chance de drop
 
-| Fonte | Chance |
+| Fonte | Chance / teto |
 | --- | --- |
-| Vitória Arena / spawn | **50%** de 1 card. **100%** na **lua cheia** |
-| Boss de exploração | Até 4 slots (teto de rank 8 / 16 / 28) |
-| Expedição | 8–30 cards (Kalpa I–V teto 8 / 14 / 22 / 32 / 40) |
+| Vitória Arena / spawn | **50%** de 1 card. **100%** na **lua cheia**. Pool transferível inteiro |
+| Boss de exploração | Até 4 slots. Superfície rank ≤8, Penumbra ≤16, Abismo ≤28 |
+| Expedição | 8–30 cards. Kalpa I ≤8, II ≤14, III ≤22, IV ≤32, V ≤40 |
 | `/rags` Magatsuhi | Todas as Magatsuhi **ativas**, só Jade |
+| Fusão | Herda dos pais / learnset da espécie. Assinatura fica de fora |
 | Mail System | Qualquer card do catálogo |
 
-Assinaturas **nunca** entram nesses pools.
+`Superfície+` / `Kalpa II+` quer dizer aquela profundidade **e as mais fundas**.
 
-## O que não vira card
+## Onde cada card dropa
 
-Assinaturas do Salão em rank 99, mais Gaea Rage, Deadly Fury e Chaotic Will do Demi-fiend. Funde ou captura o dono (Demi-fiend é DLC — só no Salão).
+| Skill | Tipo | Rank | Onde dropa |
+| --- | --- | ---: | --- |
+| Abyssal Beckoning | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Abyssal Mask | Passiva | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Accursed Poison | Ailment | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Accursed Poison A | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Acid Rain | Mágico | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Acrobat Kick | Físico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Adversary | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Adversary A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Affable Hospitality | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Agi | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Agibarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Agidyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Agilao | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Ailed Resurgence | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Akashic Arts | Físico | 29 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Allure | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Almighty Pleroma | Passiva | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Alms of Uprising | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Angelic Order | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Annihilation Ray | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Annihilation Ray A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Aqua | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Aquadyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Aquary Tide | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Aques | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Aramasa | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Astral Saintstrike | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Attack | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Attack A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Auspicious Beast | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Avalanche | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Avenger | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Axel Claw | Físico | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Babylon Curse | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Beast Eye | Passiva | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Beatdown | Físico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Beginner's Luck | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Berserker God | Físico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Best Friend | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bestial Bite | Físico | 3 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Big Bang | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Big Bang A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Biondetta | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bit Conversion | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Black Dracostrike | Mágico | 17 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Blessed Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Blessings Abound | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Blight | Físico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Blinding Strike | Físico | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Bloody Glee | Passiva | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Blossoming Sakura | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Boon Boost | Passiva | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Boon Boost EX | Passiva | 31 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Boon of Sloth | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bouncing Claw | Físico | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Bouncy Body | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Boundless Sea | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bountiful Earth | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bowl of Hygieia | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Brave Blade | Físico | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Breath of Abundance | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Brewing Storm | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bufu | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Bufu A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Bufubarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Bufudyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Bufula | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Bufula A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Burden of Talent | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Burning Aspiration | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Burning Aspiration A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Calamitous Thunder | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Call Allies | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Call Angel | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Call Evil | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Call Soldiers | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Call Souls | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Called an ally | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Capricious Goddess | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Carnage Fang | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Carnage Fang A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Carpet Bolting | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Catastrophe | Físico | 25 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Catastrophic Gales | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Cautious Cheer | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Cautious Cheer A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ceaseless Crucifixion | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Chanchala | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Chaotic Will A | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Charge | Buff | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Charge A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Charge B | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Cleansing Jolt | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Compounded Calamity | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Concentrate | Buff | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Contempt of God | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Counter | Passiva | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Counter A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Crime and Punishment | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Crippling Blow | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Critical Aura | Buff | 11 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Critical Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Critical Slash | Físico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Critical Wave | Físico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Critical Zealot | Passiva | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Crusher Onslaught | Físico | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Curious Dance | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Curse Siphon | Passiva | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Damascus Claw | Físico | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Dana's Wisdom | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dance of Mara | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dancing Strike | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dark Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Dark Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dark Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dark Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Dark Star | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dark Sword | Físico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Dawn of Demise | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Deadly Fury A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Deadly Fury B | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Death's Door | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Death's Door A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Deathbound | Físico | 17 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Deathly Affliction | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Debilitate | Debuff | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Deicidal Poison | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dekaja | Debuff | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Dekajaon | Debuff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Dekajaon A | Debuff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dekunda | Buff | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Demonic Mediation | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dia | Cura | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Dia A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dia B | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dia C | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dia D | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diabolical Deluge | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Diamrita | Cura | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Diamrita A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diarahan | Cura | 19 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Diarama | Cura | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Diarama A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diarama B | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diarama C | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diarama D | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Diarama E | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Die For Me! | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Divine Arrowfall | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Divine Benevolence | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Divine Decree | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Divine Dismantlement | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Divined Fortune | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Do nothing | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Donum Gladi | Buff | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Donum Magici | Buff | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Dormina | Ailment | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Dragon Eye | Passiva | 19 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Dragon's Blood | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Drain Dark | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Earth | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Elec | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Fire | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Force | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Ice | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Light | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Phys | Passiva | 31 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Drain Water | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Dreadful Gleam | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dreadful Gleam A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Dream Fist | Físico | 11 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Dream Needle | Físico | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Dustoma | Ailment | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Earth Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Eat Whole | Físico | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Elec Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Elec Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elec Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elec Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Electrify | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Electrify A | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elemental Star | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elephantine Ricochet | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Eleusinian Harvest | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elusive Eclipse | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Elusive Eclipse A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Endure | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Enduring Soul | Passiva | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Energy Drain | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Entangling Tendrils | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Escape | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Estoma | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Eternal Blizzard | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Eternal Prayer | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Eternal Prayer A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Evergreen Dance | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Expand: Critical Aura | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Expand: Piercing Aura | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Eye of Horus | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Eye of Ra | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fair Weather Prayer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fairies' Game | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Fairy Banquet | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Fairy Banquet A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fairy King's Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Faithful Companion | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fallen Destroyer | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Falling Star | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Falling Star A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| False Replication | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fang Breaker | Físico | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Fatal Sword | Físico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Fear of Death | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fear Torrent | Mágico | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Feline Fury | Físico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Fickle Personality | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fierce Roar | Buff | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Fiery Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Figment of Darkness | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Figment Slash | Físico | 25 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Fire Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Fire Breath | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Fire Dracostrike | Mágico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Fire Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fire Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fire Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Fire Star | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Firmament Restoration | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Flame of 12,000 Angels | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Floral Gust | Mágico | 27 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Focused Assault | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fogna | Ailment | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Forager | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Force Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Force Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Force Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Force Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Formless Arrows | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Fountain of Chaos | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Four Heavenly Edicts | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Four Heavenly Kings | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Four Horsemen | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Four Oni | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Freikugel | Mágico | 29 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Freikugel A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Freikugel B | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Freikugel C | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Freikugel EX | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Freikugel EX A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Frenzied Chomp | Físico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Frenzy | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Frigid Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Frolic | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Frontline Adaptability | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Frost Storm | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Gae Bolg | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gaea Rage A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gaea Rage B | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gaea Rage C | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gale Charge | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Galvanic Slash | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ghastfire Rain | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Give Me Your Soul! | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Glacial Blast | Mágico | 27 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Glacial Dragon Spiral | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Glorious Invocation | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| God's Aid | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Golden Apple | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Golden Ring | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Good Cheer | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Grace Unto Service | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gram Slice | Físico | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Gram Slice A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Great Curse Siphon | Passiva | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Great Lament | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Great Life Spring | Passiva | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Great Mana Spring | Passiva | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Guardian Angels | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Guardian Beast | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Guardian Beast A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gungnir | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Gusting Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hades Blast | Físico | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Hailstorm of God | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hama | Mágico | 4 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Hama A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hamabarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Hamaon | Mágico | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Hammer of Judgment | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hand You're Dealt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Harvest Dance | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Harvest Dance A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Harvest Festival | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Hassou Tobi | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Headcrush | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heal Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Healing Hand | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heart of Devotion | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heat Wave | Físico | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Heavenly Counter | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heavenly Counter A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heavenly Ikuyumi | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heavenly Reversal | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heavy Blow | Físico | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Heavy Rock | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Heliopolis Dawn | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Heliopolis Dawn A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hell Gaze | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hell Thrust | Físico | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Hellish Mask | Passiva | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Hellish Slash | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hellish Spurt | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Helmsman | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Herkeios | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| High Almighty Pleroma | Passiva | 31 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| High Dark Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Earth Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Elec Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Fire Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Force Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Heal Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Ice Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Light Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| High Phys Pleroma | Passiva | 29 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| High Restore | Passiva | 20 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| High Water Pleroma | Passiva | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Holy Crucifixion | Debuff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Holy Wrath | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Honey Trap | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Honey Trap A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hot Dark Matter | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Humble Blessing | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Hysterical Slap | Físico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Ice Age | Mágico | 28 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Ice Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Ice Breath | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Ice Dracostrike | Mágico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Ice Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ice Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ice Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Ice Shard | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ice Star | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Immolating Breath | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Impaler's Animus | Buff | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Impaler's Glory | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Impaler's Glory A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Impaler's Glory B | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Impaler's Revenge | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Impenetrable Purity | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Impetus | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Incendiary Stoning | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Inception of Chaos | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Inferno of God | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Inflaming Divinity | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Inspiring Leader | Passiva | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Intercalation | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ironclad Defense | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Jack Agilao | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Jack Bufula | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Jack Tempest | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Javelin Rain | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Javelin Rain A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Javelin Rain B | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Judgment Light | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Kannabi Veil | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Karnak | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Kept Waiting | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Keraunos | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Killing Wind | Mágico | 28 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| King Bufula | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| King of Conflagration | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| King of Tales | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| King's Ascendancy | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Life Aid | Passiva | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Life Drain | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Life Spring | Passiva | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Light Block | Buff | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Light Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Light Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Light Life Aid | Passiva | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Light Mana Aid | Passiva | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Light of Order | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Light Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Light Shard | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Light's Descent | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lighted Wheel | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lightning of God | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lightning Pulse | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lightning Pulse A | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lightning Speed | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lost Hit | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lullaby | Ailment | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Luminescent Mirage | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lunar Hurricane | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lunation Flux | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Lunge | Físico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Luster Candy | Buff | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mabufu | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Mabufubarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mabufudyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mabufula | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Mac an Luin | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Madness Glint | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Madness Nails | Físico | 25 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Madness Needle | Físico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Magatsuhi Harvest | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magatsuhi Harvest A | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magatsuhi Harvest B | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magatsuhi Plunder | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magatsuhi Spring | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magatsuhi Thriftiness | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magic Harp | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Magma Axis | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mahama | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Mahamabarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mahamaon | Mágico | 17 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mahamaon A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Maiden's Morsel | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Makajam | Ailment | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Makajamaon | Ailment | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Makakaja | Buff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Makarakarn | Buff | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Makaunda | Debuff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Malaqua | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Malaquadyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Malaques | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Mamakakaja | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Mamakaunda | Debuff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Mamudo | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Mamudobarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mamudoon | Mágico | 17 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mana Aid | Passiva | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mana Spring | Passiva | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Maragi | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Maragibarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Maragidyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Maragion | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Marakukaja | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Marakunda | Debuff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Marin Karin | Ailment | 4 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Masamakaja | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Masamakunda | Debuff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Masukukaja | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Masukunda | Debuff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Matarukaja | Buff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Matarunda | Debuff | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Matera | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Materadyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Materazi | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Matriarch's Love | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Matriarch's Love A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mazan | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Mazanbarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mazandyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mazanma | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Mazio | Mágico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Maziobarion | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Maziodyne | Mágico | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mazionga | Mágico | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Me Patra | Cura | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Media | Cura | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Media A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Media B | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Media C | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mediarahan | Cura | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mediarama | Cura | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mediarama A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mediarama B | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mediarama C | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mediarama D | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Megalomania | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Megaton Press | Físico | 25 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Megido | Mágico | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Megido Ark A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Megido Flame | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Megidola | Mágico | 20 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Megidolaon | Mágico | 26 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mesektet's Path | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mesektet's Path A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Might of Dawn | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mighty Cleave | Físico | 19 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Miracle Water | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mirage Assailment | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mirage Shot | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mirage Shot A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mist Rush | Físico | 20 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mitama Soul | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Moirae Cutter | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Moirae Measurer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Moirae Spinner | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Monstrous Offering | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Moonlight Frost | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Moonlight Frost A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mortal Jihad | Físico | 20 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Mother Goddess's Love | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mother of Ploys | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Mudo | Mágico | 4 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Mudobarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Mudoon | Mágico | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Murakumo | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Murderous Glee | Passiva | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Musmahhu | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Myopic Pressure | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Myriad Slashes | Físico | 29 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Naga-Loka | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Narukami | Mágico | 28 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Nation Builder | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Nation Founder | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Needle Spray | Físico | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Nihil Claw | Físico | 25 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Nine-Day Restoration | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Null Dark | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Earth | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Elec | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Fire | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Force | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Ice | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Light | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Phys | Passiva | 27 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Null Water | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Oath of Plenteousness | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Okuninushi's Teachings | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Omagatoki: Adversity | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Bounty | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Charge | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Conserve | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Critical | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Dance | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Doubler | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Exploit | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Free | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Hit | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Luck | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Momentum | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Pierce | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Potential | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Savage | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Sincerity | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omagatoki: Strategize | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Omnipotent Succession | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| One-Foot Hop | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Oni Formation | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Pandemonic Crush | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Pandemonic Feast | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Panta Spane | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Paraselene Blur | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Patra | Cura | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Paw-to-Paw Combat | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Pernicious Venom | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Phys Block | Buff | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Phys Enhancer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Phys Gestalt | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Phys Pleroma | Passiva | 20 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Pierce Armor | Físico | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Pine Tree's Rebirth | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Pinpoint Vitals | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Planck of Norn | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Poisma | Ailment | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Poison Adept | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Poison Master | Passiva | 23 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Power Menace | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Power Punch | Físico | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Price of Prosperity | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Primordial Chaos | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Primordial Parturition | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Profaned Land | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Pulinpa | Ailment | 4 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Puncture Punch | Físico | 12 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Purgatorium | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Purging Blade | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Purple Smoke | Físico | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Qadistu Artifice | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Cohort | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Deception | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Entropy | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Qadistu Entropy A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Entropy B | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Mandate | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Qadistu Savagery | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Raging Blizzard | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Raging Hellfire | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Raging Lightning | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Raging Tempest | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Raging Whirlwind | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Ragnarok | Mágico | 27 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Rains of Order | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Rakukaja | Buff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Rakunda | Debuff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Rakunda A | Debuff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rallying Aid | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rampage | Físico | 19 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Rasetsu Feast | Debuff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Rasetsu Feast A | Debuff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Recalcitrant Execution | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Recalcitrant Execution A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Recarm | Cura | 6 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Red Capote A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Repel Dark | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Earth | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Elec | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Fire | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Force | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Ice | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Light | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Phys | Passiva | 31 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Repel Water | Passiva | 30 | Arena/spawn 50% (100% lua cheia) · Expedição Kalpa IV+ · Fusão |
+| Resist Dark | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Earth | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Elec | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Fire | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Force | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Ice | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Light | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Resist Phys | Passiva | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Resist Water | Passiva | 13 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Restorative Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Restore | Passiva | 10 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Retaliate | Passiva | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Retaliate A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Revival Bead | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Revival Chant | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Riberama | Buff | 11 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Righteous Cross | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Righteous Sentence | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Righteous Sentence A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rising Storm Dragon | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rising Storm Dragon A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rising Storm Dragon B | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rising Storm Dragon C | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rising Storm Dragon D | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Roaring Mist | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Rooted Soul | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ruinous Thunder | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ruler of Chaos | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Runes of Wisdom | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sacrifice of Clay | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sacrificial Proxy | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Safeguard | Passiva | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Saint's Prayer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sakanagi | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sakuya Sakura | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sakuya Sakura A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Samakaja | Buff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Samakunda | Debuff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Samarecarm | Cura | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Sanguine Drain | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sankosho | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Scales of Dominion | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Scarlet Blade | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Scratch Dance | Físico | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Sea of Stars | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Seething Mansemat | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Servant of God | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Seven-Headed Beast | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Severing Bite | Físico | 19 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Sexy Dance | Ailment | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Shadow Summoning | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Shield of God | Buff | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Shield of God A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Shield of God B | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Shining Dragon Scales | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Shockbound | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Silt of Ruin | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Skyward Withdrawal | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sleep Gem | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Slumber Vortex | Ailment | 21 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Somersault | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sonic Boom | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Souffle D'eclair | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Soul Drain | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Soul Drain A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Speed Star | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Spirit Drain | Mágico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Spirited Synergy | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Stagnant Air | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Star Fragment | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Steel Needle | Físico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Storm Dracostrike | Mágico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Stormcaller Song | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sukukaja | Buff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Sukunda | Debuff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Summer Dream | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sun's Radiance | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sun's Radiance A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Sun's Radiance B | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Surrogate Guard Hound | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Synergistic Replication | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tablet of Destinies | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Taboo | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tandava | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tarukaja | Buff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Tarunda | Debuff | 5 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Taunt | Buff | 7 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Tempest | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tempest A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tentarafoo | Ailment | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Tera | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Teradyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Terazi | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Tetrakarn | Buff | 16 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Thalassic Calamity | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Thesmophoria | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Thunder Reign | Mágico | 27 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Thunderous Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tides of Chaos | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Titanomachia | Físico | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Tornado of God | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Torrent of Chaos | Mágico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Toxic Breath | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Toxic Cloud | Ailment | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Toxic Cloud A | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Toxic Spray | Ailment | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Toxic Sting | Físico | 2 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Trafuri | Passiva | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Trafuri A | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Trickery | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Tripura Samhara | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Trisagion | Mágico | 28 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| True Aim | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| True Replication | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Trumpets of Judgment | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Twilight Wave | Físico | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Twilight Wave A | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Twilit Melody | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Unending Nightmare | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Universe Ring | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Untainted Wind | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Unwavering Faith | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Usurper's Ambition | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Vengeful Might | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Venom Chaser | Físico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Vina Raga | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Vinyl Bomb | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Vinyl Bomb A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Violent Rage | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Virus Carrier | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wait and see | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Walpurgisnacht | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wanton Rebel | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Ward Off Evil | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Warrior Trainer | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Water Pleroma | Passiva | 14 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Waters of Youth | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Waters of Youth A | Cura | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Waterspout | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Waves of Order | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| Wellspring of Order | Cura | 50 | Arena/spawn 50% (100% lua cheia) · Fusão · Rag's (Jade) |
+| What Comes After Four | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| White Dracostrike | Mágico | 17 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Wild Dance | Ailment | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Willpower | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wind Breath | Mágico | 9 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa II+ · Fusão |
+| Wind Dracostrike | Mágico | 15 | Arena/spawn 50% (100% lua cheia) · Exploração Penumbra+ · Expedição Kalpa III+ · Fusão |
+| Wisdom Unleashed | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Witness Me | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Witness Me A | Buff | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| World Ingurgitation | Passiva | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wrath of Oyamatsumi | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wrath of Oyamatsumi A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Wrath Tempest | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Xeros Beat | Físico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Yabusame Shot | Físico | 22 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Yumi Nagashi | Passiva | 50 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Zan | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Zanbarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Zandyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Zanma | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Zanma A | Mágico | 99 | Arena/spawn 50% (100% lua cheia) · Fusão |
+| Zio | Mágico | 1 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
+| Ziobarion | Mágico | 24 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa IV+ · Fusão |
+| Ziodyne | Mágico | 18 | Arena/spawn 50% (100% lua cheia) · Exploração Abismo · Expedição Kalpa III+ · Fusão |
+| Zionga | Mágico | 8 | Arena/spawn 50% (100% lua cheia) · Exploração Superfície+ · Expedição Kalpa I+ · Fusão |
 
-O que é comum no kit do andar (Charge, Dekunda, Megidolaon, Mediarahan, Enduring Soul…) **é** card.
 
-## Fusão
+## Sem card (assinaturas)
 
-Pool até 25. Escolhe até 8. **Só assinatura** fica de fora. Innate racial, passiva e Magatsuhi **herdam**.
+| Skill | Dono | Onde |
+| --- | --- | --- |
+| Andalucia | Matador | Não dropa · só Matador |
+| Babylon Goblet | Mother Harlot | Não dropa · só Mother Harlot |
+| Capitulate to Pleasure | Naamah | Não dropa · só Naamah |
+| Chaotic Will | Demi-fiend | Não dropa · só Demi-fiend |
+| Cold Dark Matter | Lucifer | Não dropa · só Lucifer |
+| Deadly Fury | Demi-fiend | Não dropa · só Demi-fiend |
+| Death Flies | Beelzebub | Não dropa · só Beelzebub |
+| Death Lust | Mother Harlot | Não dropa · só Mother Harlot |
+| Evil Gleam | Lucifer | Não dropa · só Lucifer |
+| Evil Melody | Trumpeter | Não dropa · só Trumpeter |
+| Fire of Sinai | Metatron | Não dropa · só Metatron |
+| Gaea Rage | Demi-fiend | Não dropa · só Demi-fiend |
+| God's Bow | White Rider | Não dropa · só White Rider |
+| Hell Burner | Hell Biker | Não dropa · só Hell Biker |
+| Hell Exhaust | Hell Biker | Não dropa · só Hell Biker |
+| Hell Spin | Hell Biker | Não dropa · só Hell Biker |
+| Hellish Brand | Kagutsuchi | Não dropa · só Kagutsuchi |
+| Holy Melody | Trumpeter | Não dropa · só Trumpeter |
+| Meditation | Daisoujou | Não dropa · só Daisoujou |
+| Megido Ark | Satan | Não dropa · só Satan |
+| Morning Star | Lucifer | Não dropa · só Lucifer |
+| Mother Earth | Lilith | Não dropa · só Lilith |
+| Pestilence | Pale Rider | Não dropa · só Pale Rider |
+| Preach | Daisoujou | Não dropa · só Daisoujou |
+| Queen's Decree | Agrat | Não dropa · só Agrat |
+| Red Capote | Matador | Não dropa · só Matador |
+| Root of Evil | Lucifer | Não dropa · só Lucifer |
+| Soul Divide | Black Rider | Não dropa · só Black Rider |
+| Terrorblade | Red Rider | Não dropa · só Red Rider |
+| Voracious Salvation | Eisheth | Não dropa · só Eisheth |
 
-Aprenda no `/inventory` → Skill Cards. O card some.

@@ -25,17 +25,46 @@ for (const floor of hall.floors ?? []) {
   }
 }
 
-const cardSource = (skill, locale) => {
+const EXPLORATION_GATES = [
+  { max: 8, pt: 'Exploração Superfície+', en: 'Exploration Surface+' },
+  { max: 16, pt: 'Exploração Penumbra+', en: 'Exploration Penumbra+' },
+  { max: 28, pt: 'Exploração Abismo', en: 'Exploration Abyss' },
+];
+const EXPEDITION_GATES = [
+  { max: 8, pt: 'Expedição Kalpa I+', en: 'Expedition Kalpa I+' },
+  { max: 14, pt: 'Expedição Kalpa II+', en: 'Expedition Kalpa II+' },
+  { max: 22, pt: 'Expedição Kalpa III+', en: 'Expedition Kalpa III+' },
+  { max: 32, pt: 'Expedição Kalpa IV+', en: 'Expedition Kalpa IV+' },
+  { max: 40, pt: 'Expedição Kalpa V', en: 'Expedition Kalpa V' },
+];
+
+const firstGate = (rank, gates) => gates.find((gate) => rank <= gate.max);
+
+const cardWhere = (skill, locale) => {
   const owner = signatureOwners.get(skill.name);
   if (owner) {
-    return locale === 'pt' ? `Não · só ${owner}` : `No · ${owner} only`;
-  }
-  if (isMagatsuhi(skill) && skill.type !== 'passive') {
     return locale === 'pt'
-      ? 'Sim · drop + fusão + Rag\'s'
-      : 'Yes · drop + fusion + Rag\'s';
+      ? `Não dropa · só ${owner}`
+      : `Does not drop · ${owner} only`;
   }
-  return locale === 'pt' ? 'Sim · drop + fusão' : 'Yes · drop + fusion';
+  const parts =
+    locale === 'pt'
+      ? ['Arena/spawn 50% (100% lua cheia)']
+      : ['Arena/spawn 50% (100% full moon)'];
+  const exploration = firstGate(skill.rank, EXPLORATION_GATES);
+  if (exploration) parts.push(locale === 'pt' ? exploration.pt : exploration.en);
+  const expedition = firstGate(skill.rank, EXPEDITION_GATES);
+  if (expedition) parts.push(locale === 'pt' ? expedition.pt : expedition.en);
+  parts.push(locale === 'pt' ? 'Fusão' : 'Fusion');
+  if (isMagatsuhi(skill) && skill.type !== 'passive') {
+    parts.push(locale === 'pt' ? "Rag's (Jade)" : "Rag's (Jade)");
+  }
+  return parts.join(' · ');
+};
+
+const cardYesNo = (skill, locale) => {
+  if (signatureOwners.has(skill.name)) return locale === 'pt' ? 'Não' : 'No';
+  return locale === 'pt' ? 'Sim' : 'Yes';
 };
 
 const escape = (value) =>
@@ -147,8 +176,8 @@ for (const skill of skills) {
 const skillTables = (locale) => {
   const headers =
     locale === 'pt'
-      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo | Card | Efeito |'
-      : '| Name | Element | Cost | Power | Rank | Target | Card | Effect |';
+      ? '| Nome | Elemento | Custo | Poder | Rank | Alvo | Card | Onde | Efeito |'
+      : '| Name | Element | Cost | Power | Rank | Target | Card | Where | Effect |';
   const typeLabel = {
     physical: locale === 'pt' ? 'Físico' : 'Physical',
     magical: locale === 'pt' ? 'Mágico' : 'Magical',
@@ -175,10 +204,10 @@ const skillTables = (locale) => {
       .map((skill) => {
         const mag = isMagatsuhi(skill) && skill.type !== 'passive';
         const extra = mag ? ` (MAG R${magatsuhiRank(skill)} · ${jadeByRank[magatsuhiRank(skill)]} Jade)` : '';
-        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} | ${escape(cardSource(skill, locale))} | ${escape(describeSkill(skill, locale))} |`;
+        return `| ${escape(skill.name)}${extra} | ${escape(skill.element ?? '—')} | ${skill.cost} | ${skill.damage} | ${skill.rank} | ${escape(skill.target)} | ${cardYesNo(skill, locale)} | ${escape(cardWhere(skill, locale))} | ${escape(describeSkill(skill, locale))} |`;
       });
     parts.push(
-      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | --- |\n${rows.join('\n')}\n`,
+      `## ${typeLabel[type]} (${rows.length})\n\n${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | --- | --- |\n${rows.join('\n')}\n`,
     );
   }
   return parts.join('\n');
@@ -197,6 +226,45 @@ const itemTables = (locale) => {
         `| ${escape(item.name)} | ${escape(item.kind)} | ${item.rank} | ${item.buy ?? 0} | ${item.sell ?? 0} | ${item.shop ? 'yes' : 'no'} | ${item.drop ? 'yes' : 'no'} | ${item.maxStack ?? 1} | ${escape(describeItem(item, locale))} |`,
     );
   return `${headers}\n| --- | --- | ---: | ---: | ---: | --- | --- | ---: | --- |\n${rows.join('\n')}\n`;
+};
+
+const dropFarmTables = (locale) => {
+  const headers =
+    locale === 'pt'
+      ? '| Skill | Tipo | Rank | Onde dropa |'
+      : '| Skill | Type | Rank | Where it drops |';
+  const typeLabel = {
+    physical: locale === 'pt' ? 'Físico' : 'Physical',
+    magical: locale === 'pt' ? 'Mágico' : 'Magical',
+    buff: 'Buff',
+    debuff: 'Debuff',
+    heal: locale === 'pt' ? 'Cura' : 'Heal',
+    ailment: 'Ailment',
+    passive: locale === 'pt' ? 'Passiva' : 'Passive',
+  };
+  const transferable = skills
+    .filter((skill) => !signatureOwners.has(skill.name))
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name, 'en'));
+  const rows = transferable.map(
+    (skill) =>
+      `| ${escape(skill.name)} | ${escape(typeLabel[skill.type] ?? skill.type)} | ${skill.rank} | ${escape(cardWhere(skill, locale))} |`,
+  );
+  return `${headers}\n| --- | --- | ---: | --- |\n${rows.join('\n')}\n`;
+};
+
+const signatureTable = (locale) => {
+  const headers =
+    locale === 'pt'
+      ? '| Skill | Dono | Onde |'
+      : '| Skill | Owner | Where |';
+  const rows = [...signatureOwners.entries()]
+    .sort((left, right) => left[0].localeCompare(right[0], 'en'))
+    .map(
+      ([name, owner]) =>
+        `| ${escape(name)} | ${escape(owner)} | ${escape(cardWhere({ name, rank: 99, type: 'magical' }, locale))} |`,
+    );
+  return `${headers}\n| --- | --- | --- |\n${rows.join('\n')}\n`;
 };
 
 const magatsuhiTable = (locale) => {
@@ -255,7 +323,7 @@ title: Skill catalog
 description: All ${skills.length} SMTDex skills, including Magatsuhi shop ranks.
 ---
 
-**${skills.length}** skills with effect text. **Card** says if it drops as a Skill Card (Arena/spawn 50%, 100% on full moon; exploration; expedition; fusion). Signatures stay on the owner. Magatsuhi actives also show shop rank and Jade at Rag's.
+**${skills.length}** skills. **Card** is yes/no. **Where** lists every source: Arena/spawn 50% (100% full moon), exploration depth, Kalpa, fusion, and Rag's. Signatures do not drop.
 
 ${skillTables('en')}
 
@@ -274,7 +342,7 @@ title: Catálogo de skills
 description: Todas as ${skills.length} skills do SMTDex, com rank Magatsuhi da Rag's.
 ---
 
-**${skills.length}** skills com o efeito de cada uma. **Card** diz se cai como Skill Card (Arena/spawn 50%, 100% na lua cheia; exploração; expedição; fusão). Assinatura fica no dono. Magatsuhi ativas também mostram rank e Jade da Rag's.
+**${skills.length}** skills. **Card** é sim/não. **Onde** lista cada fonte: Arena/spawn 50% (100% lua cheia), profundidade da exploração, Kalpa, fusão e Rag's. Assinatura não dropa.
 
 ${skillTables('pt')}
 
@@ -312,9 +380,74 @@ ${itemTables('pt')}
 `,
 );
 
+write(
+  'skill-cards.mdx',
+  `---
+title: Skill Cards
+description: Where every transferable skill card drops, and which signatures never drop.
+---
+
+Every **transferable** skill — active and passive — is a Skill Card. **Signatures** stay on the owner: no card, no fusion inheritance.
+
+## Drop chance
+
+| Source | Chance / gate |
+| --- | --- |
+| Arena / spawn victory | **50%** for 1 card. **100%** on a **full moon**. Whole transferable pool |
+| Exploration boss | Up to 4 slots. Surface rank ≤8, Penumbra ≤16, Abyss ≤28 |
+| Expedition | 8–30 cards. Kalpa I ≤8, II ≤14, III ≤22, IV ≤32, V ≤40 |
+| \`/rags\` Magatsuhi | Every **active** Magatsuhi, Jade only |
+| Fusion | Inherit from parents / species learnset. Signatures stay out |
+| System mail | Any catalog card |
+
+\`Surface+\` / \`Kalpa II+\` means that depth **and deeper**.
+
+## Where each card drops
+
+${dropFarmTables('en')}
+
+## No card (signatures)
+
+${signatureTable('en')}
+`,
+);
+
+write(
+  'pt-br/skill-cards.mdx',
+  `---
+title: Skill Cards
+description: Onde cada Skill Card dropa, e quais assinaturas nunca dropam.
+---
+
+Toda skill **transferível** — ativa e passiva — é Skill Card. **Assinatura** fica no dono: sem card, sem herança na fusão.
+
+## Chance de drop
+
+| Fonte | Chance / teto |
+| --- | --- |
+| Vitória Arena / spawn | **50%** de 1 card. **100%** na **lua cheia**. Pool transferível inteiro |
+| Boss de exploração | Até 4 slots. Superfície rank ≤8, Penumbra ≤16, Abismo ≤28 |
+| Expedição | 8–30 cards. Kalpa I ≤8, II ≤14, III ≤22, IV ≤32, V ≤40 |
+| \`/rags\` Magatsuhi | Todas as Magatsuhi **ativas**, só Jade |
+| Fusão | Herda dos pais / learnset da espécie. Assinatura fica de fora |
+| Mail System | Qualquer card do catálogo |
+
+\`Superfície+\` / \`Kalpa II+\` quer dizer aquela profundidade **e as mais fundas**.
+
+## Onde cada card dropa
+
+${dropFarmTables('pt')}
+
+## Sem card (assinaturas)
+
+${signatureTable('pt')}
+`,
+);
+
 console.log({
   demons: demons.length,
   skills: skills.length,
   items: items.length,
   magatsuhi: skills.filter((s) => isMagatsuhi(s) && s.type !== 'passive').length,
+  signatures: signatureOwners.size,
 });
