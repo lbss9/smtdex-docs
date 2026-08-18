@@ -43,6 +43,12 @@ export default defineConfig({
               slug: 'stars-evolution',
               badge: { text: 'New', variant: 'success' },
             },
+            {
+              label: 'Essence & evolve',
+              translations: { 'pt-BR': 'Essência e evoluir' },
+              slug: 'essence-evolution',
+              badge: { text: '3.1', variant: 'success' },
+            },
           ],
         },
         {

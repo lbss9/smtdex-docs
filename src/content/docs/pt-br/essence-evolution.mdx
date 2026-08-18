@@ -1,0 +1,76 @@
+---
+title: Essência e evolução de estrelas
+description: Como converter demons duplicados em Essência e evoluir 1★ → 7★ Mítico.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Desde a **3.1.0** você pode fazer duas coisas novas com dupes:
+
+1. **Converter em Essência** — vira um item que empilha sem ocupar slot de demon.
+2. **Evoluir** um demon subindo o tier (1★ → 2★ → ... → 7★ 🌈 Mítico).
+
+<Aside type="tip">
+Slot cheio? Converta dupes em Essência antes de capturar mais. Uma Essência stackeia até **99 por espécie** e mora em **Valiosos**, fora do teto de 100 demons.
+</Aside>
+
+## Essência — o que é
+
+Cada espécie tem sua própria Essência: **Essência de Jack Frost**, **Essência de Pixie**, etc. Elas moram em `/player → Itens → Valiosos` e servem para dois usos:
+
+- **Evolução** de estrelas (custo padrão).
+- **Reserva** de espécies raras (guardar sem gastar slot).
+
+**Como conseguir:**
+
+- `/player → Demônios → escolhe o dupe → 🔄 Essência` — irreversível, o demon somem e vira 1× Essência.
+- **Confisco** (PvP): quando você vence, ganha o demon do perdedor **e** 1× Essência da espécie.
+- Auto-conversão: se ativar `autoConvertDupes` no perfil (em breve), toda captura duplicada vira Essência direto.
+
+**Regras:**
+
+- Só dupes viram Essência (se você só tem 1 daquela espécie, o botão nem aparece).
+- Favoritos e demons em party/expedição **não** convertem.
+
+## Evoluir de estrela
+
+`/player → Demônios → escolhe o alvo → 🔼 Evoluir`.
+
+### Custo por tier
+
+| Sobe | Essência | Jade | Mitama (Essência) | Macca |
+| :---: | :--- | ---: | :--- | ---: |
+| 1★ → 2★ | 3× qualquer | — | — | 5 000 |
+| 2★ → 3★ | 3× qualquer | 1× | — | 15 000 |
+| 3★ → 4★ | 3× qualquer | 2× | — | 40 000 |
+| 4★ → 5★ | 3× qualquer | 3× | — | 100 000 |
+| **5★ → 6★** 💠 | **3× MESMA espécie** | 5× | 1× (qualquer Mitama) | 300 000 |
+| **6★ → 7★** 🌈 | **3× MESMA espécie** | 10× | 1× Ara + 1× Nigi + 1× Kusi + 1× Saki | 800 000 |
+
+**"Qualquer"** — nos tiers 1★→5★ a Essência pode ser de qualquer espécie/tier.  
+**"MESMA espécie"** — a partir do 5★→6★ o gate exige Essência da própria espécie que está evoluindo. É onde o farm começa.
+
+### O que muda no demon
+
+- **Tier** sobe 1 (o multiplicador da tabela em [estrelas e evolução](../stars-evolution/) vira o novo).
+- **Teto de nível** e **teto de stat** expandem imediatamente.
+- **Nível, moveset, bônus Mitama e Skill Cards aprendidos** ficam intactos.
+- **XP** também fica — pode continuar batendo ali mesmo.
+
+### O que precisa dar certo
+
+- Alvo **não** pode estar em 7★ (topo).
+- Você precisa dos recursos exatos na hora do clique — o botão mostra ✅/❌ por linha antes de confirmar.
+- Tudo dentro de uma transação: se qualquer coisa falhar, **nada** é debitado.
+
+## Dicas
+
+- **Sinta a diferença 5→6**: até 5★ dá para farmar dupes em spawn e reciclar. A partir daí você precisa **do mesmo bicho** três vezes no 5★ — vira projeto.
+- **Guarde Mitamas em Essência.** Ara, Nigi, Kusi, Saki: cada uma vira Essência da mesma forma. Elas só saem no gate 6★→7★, então acumular cedo compensa.
+- **Não converta o único de uma espécie.** O botão bloqueia por acidente, mas se você tem 2 Pixies e a outra é favorita, a que sobra é o único — e favorito não vira Essência também.
+- **Confisco PvP virou mais atrativo** — além do demon, você ganha 1× Essência que ajuda na sua própria evolução.
+
+## Roadmap dessa mecânica
+
+- **Auto-conversão de dupes na captura** — toggle no perfil, default OFF. (Em breve.)
+- **Awakening/Talentos além do 7★** — no futuro, uma vez todos os slots ocupados. (Sem data.)

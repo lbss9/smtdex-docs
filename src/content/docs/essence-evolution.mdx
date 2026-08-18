@@ -1,0 +1,76 @@
+---
+title: Essence & star evolution
+description: Convert duplicate demons into Essence and evolve any demon 1★ → 7★ Mythic.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Since **3.1.0** you can do two new things with duplicates:
+
+1. **Convert to Essence** — turns the demon into a stackable item that doesn't take a demon slot.
+2. **Evolve** a demon one tier up (1★ → 2★ → ... → 7★ 🌈 Mythic).
+
+<Aside type="tip">
+Roster full? Convert dupes to Essence before catching more. Each Essence stacks up to **99 per species** in **Valuables** — outside the 100-demon cap.
+</Aside>
+
+## Essence — what it is
+
+Every species has its own Essence: **Essence of Jack Frost**, **Essence of Pixie**, etc. They live in `/player → Items → Valuables` and have two uses:
+
+- **Star evolution** cost.
+- **Bank** for rare species (store without eating a slot).
+
+**How to get it:**
+
+- `/player → Demons → pick a dupe → 🔄 Essence` — irreversible; the demon vanishes and becomes 1× Essence.
+- **Confiscation** (PvP): winning nets the demon **and** 1× Essence of its species.
+- Auto-convert (coming soon): flip `autoConvertDupes` in your profile and every duplicate capture goes straight to Essence.
+
+**Rules:**
+
+- Only duplicates convert. If you own only 1 of the species, the button doesn't show.
+- Favorites and demons in party/expedition **won't** convert.
+
+## Star evolution
+
+`/player → Demons → pick the target → 🔼 Evolve`.
+
+### Cost per tier
+
+| Up | Essence | Jade | Mitama (Essence) | Macca |
+| :---: | :--- | ---: | :--- | ---: |
+| 1★ → 2★ | 3× any | — | — | 5,000 |
+| 2★ → 3★ | 3× any | 1× | — | 15,000 |
+| 3★ → 4★ | 3× any | 2× | — | 40,000 |
+| 4★ → 5★ | 3× any | 3× | — | 100,000 |
+| **5★ → 6★** 💠 | **3× SAME species** | 5× | 1× (any Mitama) | 300,000 |
+| **6★ → 7★** 🌈 | **3× SAME species** | 10× | 1× Ara + 1× Nigi + 1× Kusi + 1× Saki | 800,000 |
+
+**"Any"** — 1★→5★ upgrades accept any species/tier Essence.  
+**"SAME species"** — starting at 5★→6★, the Essence must match the demon being evolved. That's where the farm kicks in.
+
+### What changes on the demon
+
+- **Tier** goes up by 1 (multipliers table on [stars & evolution](../stars-evolution/) applies).
+- **Level cap** and **stat cap** expand instantly.
+- **Level, moveset, Mitama bonuses, learned Skill Cards** all preserved.
+- **XP** stays too — you can keep grinding where you were.
+
+### What must line up
+
+- Target can't be at 7★ (top).
+- Resources checked live before confirming — the button shows ✅/❌ per line.
+- All inside a transaction: if anything fails, **nothing** is debited.
+
+## Tips
+
+- **The 5→6 wall**: up to 5★ you can dip into any dupes lying around. From there you need **the same demon three times at 5★** — it becomes a project.
+- **Bank Mitamas as Essence.** Ara / Nigi / Kusi / Saki each convert to Essence the same way. They only matter at the 6★→7★ gate, so stockpiling early pays off.
+- **Don't convert your only copy.** The button blocks by mistake, but if you own 2 Pixies and one is favorited, the other is effectively your only — and favorites don't convert either.
+- **PvP Confiscation is stronger** — you get the demon AND 1× Essence toward your own evolutions.
+
+## Roadmap for this system
+
+- **Auto-conversion on capture** — profile toggle, default OFF. (Coming soon.)
+- **Awakening/Talents beyond 7★** — once every slot is filled. (No date yet.)
