@@ -1,0 +1,96 @@
+---
+title: O que mudou na 3.0.0
+description: Rebalance Nocturne — 7 estrelas, teto de stat por tier, Mitama flat, /player e nova fórmula de dano.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+A 3.0.0 é a maior mudança desde o lançamento. É **rebalance**, não wipe — seus demons, macca e Renome ficam.
+
+<Aside type="caution" title="O essencial em uma piscada">
+- Estrelas vão de **1★ a 7★** (antes 1–5).
+- Teto de stat **depende do tier** — o 999 flat saiu para quem não é boss.
+- **IVs foram removidos.** Todo demon do mesmo tier tem os mesmos stats base.
+- **Mitama** dá **+1 flat** por infusão (antes +20% do atual).
+- Dano usa nova **fórmula estilo Nocturne**.
+- `/inventory` e `/party` **saíram**. Tudo vive dentro de [`/player`](../commands/#player).
+</Aside>
+
+## 7 estrelas, teto por tier
+
+A escala antiga de 5 estrelas ganhou **6★ 💠 Lendário** e **7★ 🌈 Mítico**. Cada tier tem o próprio teto de nível e de stat:
+
+| Tier | Teto de nível | Teto de stat | Multiplicador |
+| --- | ---: | ---: | ---: |
+| 1★ | 20 | 50 | ×0,85 |
+| 2★ | 30 | 50 | ×1,00 |
+| 3★ | 40 | 50 | ×1,15 |
+| 4★ | 50 | 50 | ×1,30 |
+| 5★ | 60 | 50 | ×1,50 |
+| 6★ 💠 | 75 | 60 | ×1,75 |
+| 7★ 🌈 | 99 | 75 | ×2,00 |
+
+Só STR / MAG / VIT / AGI / LCK caem no teto por tier. **HP e MP continuam escalando até 9 999.** Bosses ignoram o cap.
+
+Página cheia: [Estrelas e evolução](../stars-evolution/).
+
+## IVs saíram
+
+Todo demon da mesma espécie **e** tier agora tem os mesmos stats base. Duas Pixies 4★ são idênticas no nível 50. A diferença individual vem de:
+
+1. **Tier** (tabela acima).
+2. **Mitama** infundida na Câmara.
+
+`/info` não mostra mais IVs. O poder da Expedição é medido só por **nível × tier**.
+
+## Mitama — +1 flat por infusão
+
+A Câmara (`/fuse`) agora dá **+1** em cada um dos dois stats da mitama. Toda infusão, toda vez. Teto: **+20 no total por stat**.
+
+| Mudou | Antes | Agora |
+| --- | --- | --- |
+| Por infusão | +20% do stat atual | **+1 flat** |
+| Total por stat | Até 2× o base (teto 999) | **+20 de bônus** |
+| Lote | 20 (igual) | 20 |
+
+Stats pequenos ganham fôlego rápido. Demons de endgame ainda fecham com bônus relevantes sem estourar o cap do tier.
+
+## Dano estilo Nocturne
+
+Golpe base:
+
+```
+base = ((nível + stat) × poder_da_skill) / 15
+```
+
+Depois entram stages de ataque/defesa, pleroma, charge, resistência e um ±5% aleatório. Vitalidade dá um amortecedor leve de defesa: `30 / (30 + VIT)`.
+
+Sem mais fórmula com raiz quadrada. Detalhe em [Party e batalhas](../battles/).
+
+## `/player` no lugar de `/inventory` e `/party`
+
+Um único comando com menu privado cuida de tudo:
+
+```
+/player
+ ├─ Itens 📦
+ │   ├─ Consumíveis 🧪
+ │   ├─ Valiosos 💎
+ │   ├─ Talismãs 🔮
+ │   ├─ Skill Cards 🎴
+ │   └─ Voltar ⬅️ · Fechar ❌
+ ├─ Demônios 👥    (mesma visão do antigo /inventory demons)
+ ├─ Grupos ⚔️     (mesma visão do antigo /party)
+ └─ Fechar ❌
+```
+
+Só você vê, só você clica, 15 minutos ocioso e cai "Sessão expirada". Ver [página de comandos](../commands/#player).
+
+## Checklist de migração
+
+- [x] Nada a fazer do seu lado — a migração rodou no deploy.
+- [x] Demons antigos que eram 5★ continuam 5★. Os novos 6★ e 7★ só aparecem a partir da 3.0.0.
+- [x] Bônus de Mitama foram limitados ao novo teto de **+20**. O excedente voltou em silêncio.
+- [x] Grupos de `/party` migraram para `/player → Grupos`.
+
+Dúvidas? Fale com o mantenedor pelo [repositório no GitHub](https://github.com/lbss9/smtdex-docs).

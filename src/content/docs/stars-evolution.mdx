@@ -1,0 +1,65 @@
+---
+title: Stars & evolution
+description: The 7-tier star system, level caps, stat caps, and how demons grow after 3.0.0.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Every wild demon rolls **1★ to 7★** at capture. Stars set the level cap, the stat multiplier, and the top-end stat ceiling. There are **no IVs** anymore — the tier is the whole story, plus **Mitama** infusion on top.
+
+## The 7 tiers
+
+| Tier | Label | Level cap | Stat cap (STR/MAG/VIT/AGI/LCK) | Stat multiplier |
+| --- | --- | ---: | ---: | ---: |
+| **1★** | Common | 20 | 50 | ×0.85 |
+| **2★** | Uncommon | 30 | 50 | ×1.00 |
+| **3★** | Rare | 40 | 50 | ×1.15 |
+| **4★** | Epic | 50 | 50 | ×1.30 |
+| **5★** | Ultra | 60 | 50 | ×1.50 |
+| **6★** 💠 | **Legendary** | 75 | 60 | ×1.75 |
+| **7★** 🌈 | **Mythic** | 99 | 75 | ×2.00 |
+
+HP and MP are **not** limited by the tier — they keep scaling with level up to **9,999**.
+
+Bosses (Infernal Hall Fiends, endgame recipes) ignore the per-tier stat cap and use an absolute ceiling of **999**.
+
+## What decides the tier when you capture
+
+- **Wild spawn:** the roll is weighted — 1★ is the most common, 7★ is extremely rare. **Full/new moon** and **weekend (Brasília)** push higher tiers.
+- **Boss spawn:** the boss instance uses its own tier band; the three adds vanish on win.
+- **Fusion child:** the result inherits the **minimum tier of the parents**. Chamber (Mitama) infusion does **not** change tier.
+- **Rag's demons:** buys arrive at the Rag's fixed tier.
+
+Level band when a demon is generated on-the-fly (fusion accidents, event drops):
+
+| Level | Tier |
+| ---: | :---: |
+| 1–15 | 1★ |
+| 16–25 | 2★ |
+| 26–40 | 3★ |
+| 41–55 | 4★ |
+| 56–70 | 5★ |
+| 71–85 | 6★ 💠 |
+| 86–99 | 7★ 🌈 |
+
+## Progression paths
+
+1. **Level** the demon in `/battle`. Each tier stops at its **level cap** — a 3★ Pixie freezes at level 40 no matter how many fights you throw at her.
+2. **Fuse** it into a stronger species. The child inherits the **min tier** of the parents, so mixing higher-tier parents keeps the tier high.
+3. **Infuse Mitama** in the Chamber (`/fuse`). Each infusion adds **+1** to two stats, capped at **+20 total per stat**. See [Fusion & Mitama](../fusion/).
+4. Chase legendary and mythic species through **Special** and **Legendary** recipes — see [Fusion](../fusion/) for the recipe list.
+
+<Aside type="note" title="Why did my old 5★ change?">
+The 3.0.0 rebalance kept your instance stars intact: a demon that was 5★ before is still 5★. The new **6★** and **7★** are added on top for endgame content.
+</Aside>
+
+## Stat caps in one line
+
+```
+Non-boss STR/MAG/VIT/AGI/LCK  ≤  50 (tiers 1–5) · 60 (6★) · 75 (7★)
+Mitama bonus per stat         ≤  +20
+HP / MP                       ≤  9,999
+Damage per hit                ≤  99,999
+```
+
+See [Party & battles](../battles/) for the full damage formula.

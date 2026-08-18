@@ -1,0 +1,96 @@
+---
+title: What's new in 3.0.0
+description: The Nocturne rebalance — 7 stars, tier stat caps, flat Mitama, /player, and a new damage formula.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+3.0.0 is the biggest change since launch. It's a **rebalance**, not a wipe — your demons, macca, and Renown all carry over.
+
+<Aside type="caution" title="Big changes in one glance">
+- Stars now go from **1★ to 7★** (was 1–5).
+- Stat cap **depends on the tier** — the flat 999 is gone for non-bosses.
+- **IVs are removed.** Every demon of the same tier has the same base stats.
+- **Mitama** gives **+1 flat** per infusion (was +20% of current).
+- Damage uses a new **Nocturne-style formula**.
+- `/inventory` and `/party` are **gone**. Everything is inside [`/player`](../commands/#player).
+</Aside>
+
+## 7 stars, tier caps
+
+The old 5-star ladder was extended with **6★ 💠 Legendary** and **7★ 🌈 Mythic**. Each tier owns its own level cap and stat cap:
+
+| Tier | Level cap | Stat cap | Multiplier |
+| --- | ---: | ---: | ---: |
+| 1★ | 20 | 50 | ×0.85 |
+| 2★ | 30 | 50 | ×1.00 |
+| 3★ | 40 | 50 | ×1.15 |
+| 4★ | 50 | 50 | ×1.30 |
+| 5★ | 60 | 50 | ×1.50 |
+| 6★ 💠 | 75 | 60 | ×1.75 |
+| 7★ 🌈 | 99 | 75 | ×2.00 |
+
+Only STR / MAG / VIT / AGI / LCK are tier-capped. **HP and MP still scale to 9,999.** Bosses ignore the cap.
+
+Full page: [Stars & evolution](../stars-evolution/).
+
+## IVs are gone
+
+Every demon of the same species **and** tier now has the same base stats. Two 4★ Pixies are identical at level 50. Individual growth comes from:
+
+1. **Tier** (see table above).
+2. **Mitama** infusion in the Chamber.
+
+`/info` no longer shows IVs. Expedition power is measured from **level × tier** only.
+
+## Mitama — flat +1 per infusion
+
+The Chamber (`/fuse`) now grants **+1** on each of the mitama's two stats. Every infusion, every time. Cap: **+20 total per stat**.
+
+| Change | Before | After |
+| --- | --- | --- |
+| Per infusion | +20% of the current stat | **+1 flat** |
+| Total per stat | Up to 2× base (cap 999) | **+20 bonus** |
+| Batch size | 20 (unchanged) | 20 |
+
+Small stats catch up fast. Endgame demons still finish with meaningful bonuses without exploding past the tier cap.
+
+## Nocturne-style damage
+
+Base hit:
+
+```
+base = ((level + stat) × skillPower) / 15
+```
+
+Then attack/defense stages, pleroma, charge, resistance, and a small ±5% roll are applied. Vitality now provides a mild defense buffer as `30 / (30 + VIT)`.
+
+No more sqrt / root formula. Full breakdown in [Party & battles](../battles/).
+
+## `/player` replaces `/inventory` and `/party`
+
+A single menu-driven command handles everything private about your account:
+
+```
+/player
+ ├─ Items 📦
+ │   ├─ Consumables 🧪
+ │   ├─ Valuables 💎
+ │   ├─ Talismans 🔮
+ │   ├─ Skill Cards 🎴
+ │   └─ Back ⬅️ · Close ❌
+ ├─ Demons 👥      (same view as the old /inventory demons)
+ ├─ Groups ⚔️      (same view as the old /party)
+ └─ Close ❌
+```
+
+Ephemeral, invoker-only, 15-minute idle timeout ("Sessão expirada"). See the [commands page](../commands/#player).
+
+## Migration checklist
+
+- [x] Nothing to do on your side — the migration ran on deploy.
+- [x] Old 5★ demons are still 5★. New 6★ and 7★ can only be earned in 3.0.0+.
+- [x] Your Mitama bonuses were capped to the new **+20** total. Any excess was reclaimed silently.
+- [x] Party groups (`/party`) migrated into `/player → Groups`.
+
+Questions? Ping the maintainer through the [GitHub repository](https://github.com/lbss9/smtdex-docs).

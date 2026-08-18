@@ -1,25 +1,37 @@
 ---
 title: Demons
-description: Estrelas, IVs, potentials, estoque 100 e as 284 espécies.
+description: Estrelas, tetos por tier, potentials, estoque 100 e as 287 espécies.
 ---
 
-**284** espécies no catálogo. Cada demon seu é uma instância: nível, estrelas, IVs, moveset, apelido e bônus Mitama.
+**287** espécies no catálogo. Cada demon seu é uma instância: nível, estrelas, moveset, apelido e bônus Mitama.
 
 Lista completa: [catálogo de demons](../catalog-demons/). Skills: [catálogo de skills](../catalog-skills/).
 
 ## Estrelas
 
-1★ a 5★ (💠 lendário). Multiplicam stats/HP/MP: **1,0 / 1,1 / 1,25 / 1,45 / 1,75**. Na fusão, o resultado herda o **mínimo dos pais**. Infusão Mitama **não** muda estrelas.
+**1★ a 7★** — 6★ é 💠 **Lendário**, 7★ é 🌈 **Mítico**. Multiplicam stats/HP/MP:
 
-## Stats e IVs
+| Tier | Multiplicador | Teto de nível | Teto de stat |
+| --- | ---: | ---: | ---: |
+| 1★ | ×0,85 | 20 | 50 |
+| 2★ | ×1,00 | 30 | 50 |
+| 3★ | ×1,15 | 40 | 50 |
+| 4★ | ×1,30 | 50 | 50 |
+| 5★ | ×1,50 | 60 | 50 |
+| 6★ 💠 | ×1,75 | 75 | 60 |
+| 7★ 🌈 | ×2,00 | 99 | 75 |
 
-HP/MP teto **9999**. STR/MAG/VIT/AGI/LCK teto **999**. Dano por golpe **99 999**.
+Na fusão, o resultado herda o **mínimo dos pais** em tier. Infusão Mitama **não** muda estrelas. Detalhes: [estrelas e evolução](../stars-evolution/).
 
-IVs **0–31** por stat (HP, STR, MAG, VIT, AGI, LCK; soma máx. 186). Fusão rola IVs novos.
+## Stats
+
+HP/MP teto **9 999**. STR / MAG / VIT / AGI / LCK usam o **teto de stat do tier** acima. Dano por golpe **99 999**.
+
+**Sem IVs** desde a 3.0.0 — dois demons da mesma espécie **e** tier têm stats base idênticos. A diferença individual vem só de **tier** e **Mitama infundida**.
 
 **Potentials** (−9 a +9) modificam dano, cura, ailment e MP da espécie. **Não** aplicam em Magatsuhi.
 
-Mitama: +20% em dois stats até **999**. Mitamas usam **☯** e não entram em party. Ver [Fusão](../fusion/).
+Mitama: **+1 flat** em dois stats por infusão, teto **+20 total por stat**. Mitamas usam **☯** e não entram em party. Ver [Fusão](../fusion/).
 
 ## Resistências e afinidades
 
@@ -27,7 +39,7 @@ Mitama: +20% em dois stats até **999**. Mitamas usam **☯** e não entram em p
 
 ## Inventário
 
-Teto **100** (mail pendente não conta). `/inventory` lista, detalha, exclui. Expedição trava exclusão e learn. `/info` consulta a espécie ou a instância.
+Teto **100** (mail pendente não conta). `/player` → **Demônios** lista, detalha, exclui. Expedição trava exclusão e learn. `/info` consulta a espécie ou a instância.
 
 ## O que não spawnam
 

@@ -15,6 +15,11 @@ hero:
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="tip" title="New in 3.0.0 — the Nocturne rebalance">
+**7-star tiers** (1★ common → 7★ 🌈 Mythic), tier-based stat caps, IVs removed, flat **+1 Mitama** infusions, and a Nocturne-style damage formula. The old `/inventory` and `/party` are gone — everything now lives inside [`/player`](commands/#player). See [What's new in 3.0.0](whats-new-300/).
+</Aside>
 
 SMTDex turns your server into a hunting ground for demons from *Shin Megami Tensei V* and *Nocturne*. Talk in the channels, wild demons appear, and you capture them by typing their name. Then you build a party, fuse stronger forms — including **Mitama** — and battle.
 
@@ -23,7 +28,7 @@ SMTDex turns your server into a hunting ground for demons from *Shin Megami Tens
     Spawns about every three minutes. Type the name to capture, or fight. Elements drop Jade and color gems.
   </Card>
   <Card title="Collect" icon="star">
-    Each instance has 1–5 stars. Attributes cap at 999; HP and MP at 9,999. Use `/inventory` and `/info`.
+    Each instance rolls **1★ to 7★**. Stat caps scale with tier (50 → 75); HP/MP still cap at 9,999. See [Stars & evolution](stars-evolution/).
   </Card>
   <Card title="Battle" icon="rocket">
     `/battle`: Arena, Exploration, Expedition, Infernal Hall, Duelo, or Confisco.

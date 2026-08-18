@@ -3,7 +3,19 @@ title: Changelog
 description: Histórico de versões do SMTDex.
 ---
 
-Registro datado do que entrou em cada versão. O bot está em **2.8.2**.
+Registro datado do que entrou em cada versão. O bot está em **3.0.0**.
+
+## 3.0.0 — 18 de agosto de 2026
+
+**Rebalance grande — alinhamento com Nocturne.** Guia completo: [o que mudou na 3.0](../whats-new-300/).
+
+- **7 tiers de estrelas** (antes 5). 6★ 💠 Lendário, 7★ 🌈 Mítico.
+- **Teto de stat por tier** (50 até 5★ · 60 no 6★ · 75 no 7★). HP/MP ainda batem em 9 999. Bosses ignoram.
+- **IVs removidos.** Mesma espécie + tier = stats base idênticos.
+- **Mitama** agora **+1 flat** por infusão (antes +20% do atual). Teto +20 total por stat.
+- **Fórmula de dano:** `((nível + atributo) × poder_da_skill) ÷ 15`, estilo Nocturne.
+- **`/inventory` e `/party` removidos** — tudo em [`/player`](../commands/#player).
+- Datastore rebalanceado (287 espécies re-tiered, 106 clamps de stat). Migração DB puxou todo demon existente; **5★ existentes permanecem 5★** (sem promoção grátis).
 
 ## 2.8.2 — 16 de agosto de 2026
 

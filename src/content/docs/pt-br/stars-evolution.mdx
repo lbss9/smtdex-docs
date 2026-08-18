@@ -1,0 +1,65 @@
+---
+title: Estrelas e evolução
+description: Sistema de 7 estrelas, tetos de nível, tetos de stat e como o demon evolui depois da 3.0.0.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Todo demon selvagem sorteia **1★ a 7★** na captura. As estrelas definem o teto de nível, o multiplicador de stats e o teto máximo de cada atributo. **Acabaram os IVs** — o tier conta a história inteira, mais a infusão de **Mitama** por cima.
+
+## Os 7 tiers
+
+| Tier | Nome | Teto de nível | Teto de stat (STR/MAG/VIT/AGI/LCK) | Multiplicador |
+| --- | --- | ---: | ---: | ---: |
+| **1★** | Comum | 20 | 50 | ×0,85 |
+| **2★** | Incomum | 30 | 50 | ×1,00 |
+| **3★** | Raro | 40 | 50 | ×1,15 |
+| **4★** | Épico | 50 | 50 | ×1,30 |
+| **5★** | Ultra | 60 | 50 | ×1,50 |
+| **6★** 💠 | **Lendário** | 75 | 60 | ×1,75 |
+| **7★** 🌈 | **Mítico** | 99 | 75 | ×2,00 |
+
+HP e MP **não** têm teto por tier — continuam escalando com o nível até **9 999**.
+
+Bosses (Fiends do Salão, receitas endgame) ignoram o teto por tier e usam o teto absoluto de **999**.
+
+## Como o tier é decidido na captura
+
+- **Spawn selvagem:** o sorteio é ponderado — 1★ é o mais comum, 7★ é extremamente raro. **Lua cheia/nova** e **fim de semana (Brasília)** empurram os tiers altos.
+- **Spawn de boss:** o boss usa a própria faixa; os 3 adds somem na vitória.
+- **Filho de fusão:** herda o **menor tier dos pais**. A Câmara (Mitama) **não** muda o tier.
+- **Rag's:** as compras chegam no tier fixo da Rag's.
+
+Faixa de nível quando um demon nasce fora do fluxo normal (acidente de fusão, eventos):
+
+| Nível | Tier |
+| ---: | :---: |
+| 1–15 | 1★ |
+| 16–25 | 2★ |
+| 26–40 | 3★ |
+| 41–55 | 4★ |
+| 56–70 | 5★ |
+| 71–85 | 6★ 💠 |
+| 86–99 | 7★ 🌈 |
+
+## Caminhos de progressão
+
+1. **Suba de nível** em `/battle`. Cada tier trava no **teto de nível** — Pixie 3★ para no nível 40 por mais luta que role.
+2. **Funda** em uma espécie mais forte. O filho herda o **menor tier** dos pais, então misturar pais de tier alto mantém o tier alto.
+3. **Infunda Mitama** na Câmara (`/fuse`). Cada infusão dá **+1** em dois stats, até **+20 no total por stat**. Ver [Fusão e Mitama](../fusion/).
+4. Persiga espécies lendárias e míticas nas receitas **Special** e **Legendary** — lista em [Fusão](../fusion/).
+
+<Aside type="note" title="O que aconteceu com meu 5★ antigo?">
+O rebalance da 3.0.0 preservou as estrelas de cada instância: quem era 5★ continua 5★. Os novos **6★** e **7★** aparecem por cima para o endgame.
+</Aside>
+
+## Tetos em uma linha
+
+```
+STR/MAG/VIT/AGI/LCK (fora de boss)  ≤  50 (tiers 1–5) · 60 (6★) · 75 (7★)
+Bônus Mitama por stat               ≤  +20
+HP / MP                             ≤  9 999
+Dano por golpe                      ≤  99 999
+```
+
+Fórmula de dano completa em [Party e batalhas](../battles/).

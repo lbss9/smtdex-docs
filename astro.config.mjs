@@ -28,6 +28,24 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: "What's new in 3.0",
+          translations: { 'pt-BR': 'Novidades da 3.0' },
+          items: [
+            {
+              label: 'The 3.0 rebalance',
+              translations: { 'pt-BR': 'O rebalanceamento 3.0' },
+              slug: 'whats-new-300',
+              badge: { text: 'New', variant: 'success' },
+            },
+            {
+              label: 'Stars & evolution',
+              translations: { 'pt-BR': 'Estrelas e evolução' },
+              slug: 'stars-evolution',
+              badge: { text: 'New', variant: 'success' },
+            },
+          ],
+        },
+        {
           label: 'Play',
           translations: { 'pt-BR': 'Jogar' },
           items: [

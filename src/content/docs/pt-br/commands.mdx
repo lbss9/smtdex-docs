@@ -1,17 +1,18 @@
 ---
 title: Comandos
-description: Todos os slash commands do SMTDex 2.7.5.
+description: Todos os slash commands do SMTDex 3.0.0.
 ---
 
-Menus só seus incluem **Fechar** e fecham depois de **um minuto** ocioso, salvo o Confisco (90 s).
+import { Aside } from '@astrojs/starlight/components';
+
+Menus só seus incluem **Fechar** e fecham depois de **15 minutos** ociosos ("Sessão expirada"), salvo o Confisco (90 s).
 
 | Comando | O que faz |
 | --- | --- |
 | `/start` | Inicial + 500 macca (uma vez). Pixie, Slime, Onmoraki, Cait Sith, Angel. |
 | `/battle` | PvE: Arena, Exploração, Expedição, Salão Infernal. PvP: Duelo, Confisco. Manual ou auto. |
-| `/party` | Até 4 demons. Criar, editar, apagar. Mitamas fora. |
-| `/inventory` | Items (Comum / Valiosos / Talisman / Skill Cards) e demons. Buscar. Aprender. Usar Shard/Crystal. |
-| `/info` | Espécie do catálogo **ou** instância sua (IVs, Mitama, moveset). |
+| `/player` | **Menu de inventário + grupos.** Itens, demônios, grupos. Efêmero. |
+| `/info` | Espécie do catálogo **ou** instância sua (tier, stats, Mitama, moveset). |
 | `/fuse` | Fusão 2 / 3 / 4, Reverso, Câmara de Mitamas. Filtro e busca. |
 | `/rags` | Rag's Jewelry: Elements, Mitamas, **Magatsuhi**. Buscar. |
 | `/shop` | Comprar items e vender. Buscar. |
@@ -20,4 +21,34 @@ Menus só seus incluem **Fechar** e fecham depois de **um minuto** ocioso, salvo
 | `/profile` | Título, Ref, Renome, macca, MAG, W/L, demons X/100. |
 | `/balance` | **Mesmo painel** que `/profile`. |
 
-Não existem mais `/compendium`, `/lua`, `/sacrifice` nem `/trade`.
+Não existem mais `/inventory`, `/party`, `/compendium`, `/lua`, `/sacrifice` nem `/trade`.
+
+## `/player`
+
+A nova casa de tudo que é privado da conta. Resposta efêmera, botões só do dono, timeout de **15 minutos** ocioso.
+
+```
+/player
+ ├─ Itens 📦
+ │   ├─ Consumíveis 🧪   (cura, revive, status, suporte, dampener, ataque, Magatsuhi)
+ │   ├─ Valiosos 💎      (gemas, item-chave — candelabros não vendem)
+ │   ├─ Talismãs 🔮      (selados por enquanto)
+ │   ├─ Skill Cards 🎴   (ativas, passivas e Magatsuhi transferíveis)
+ │   └─ Voltar ⬅️ · Fechar ❌
+ ├─ Demônios 👥          (listar · detalhar · excluir · aprender skill)
+ ├─ Grupos ⚔️            (criar · editar · apagar parties; até 4 demons, sem Mitamas)
+ └─ Fechar ❌
+```
+
+<Aside type="tip">
+Aprender skill: **Itens → Skill Cards → pick card → pick demon**. O card some. Moveset cheio (8) pede troca.
+</Aside>
+
+### De onde veio cada aba
+
+| Antigo | Novo |
+| --- | --- |
+| `/inventory` items | `/player → Itens` |
+| `/inventory` demons | `/player → Demônios` |
+| `/inventory` aprender skill | `/player → Itens → Skill Cards` |
+| `/party` listar / criar / editar / apagar | `/player → Grupos` |

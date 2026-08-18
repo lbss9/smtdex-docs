@@ -3,7 +3,19 @@ title: Changelog
 description: SMTDex version history.
 ---
 
-Dated record of what shipped. The bot is at **2.8.2**.
+Dated record of what shipped. The bot is at **3.0.0**.
+
+## 3.0.0 — 18 August 2026
+
+**Major rebalance — Nocturne alignment.** Full guide: [what's new in 3.0](../whats-new-300/).
+
+- **7 star tiers** (was 5). 6★ 💠 Legendary, 7★ 🌈 Mythic.
+- **Per-tier stat cap** (50 up to 5★ · 60 on 6★ · 75 on 7★). HP/MP still cap 9,999. Bosses bypass.
+- **IVs removed.** Same species + tier = same base stats.
+- **Mitama** now **+1 flat** per infusion (was +20% of current). Cap +20 total per stat.
+- **Damage formula:** `((level + stat) × skill_power) ÷ 15`, Nocturne style.
+- **`/inventory` and `/party` removed** — see [`/player`](../commands/#player).
+- Datastore rebalanced (287 species re-tiered, 106 stat clamps). DB migration bumped every existing demon; **existing 5★ stay 5★** (no free promotion).
 
 ## 2.8.2 — 16 August 2026
 

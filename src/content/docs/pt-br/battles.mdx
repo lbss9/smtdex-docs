@@ -3,9 +3,22 @@ title: Party e batalhas
 description: Press Turn, Arena, PvP, lua, XP, macca e como lutar.
 ---
 
-Uma party tem até **quatro** demons (`/party`). Mínimo 1. Nome até 64 caracteres. **Mitamas não entram em party nem em batalha.** Expedição ativa **trava** a party.
+Uma party tem até **quatro** demons (`/player` → Grupos). Mínimo 1. Nome até 64 caracteres. **Mitamas não entram em party nem em batalha.** Expedição ativa **trava** a party.
 
-Caps: STR/MAG/VIT/AGI/LCK **999** · HP/MP **9999** · dano por golpe **99 999** · fases **60** (empate).
+Caps: STR/MAG/VIT/AGI/LCK **por tier** (50 até 5★ · 60 no 6★ · 75 no 7★; bosses ignoram) · HP/MP **9 999** · dano por golpe **99 999** · fases **60** (empate).
+
+## Fórmula de dano (estilo Nocturne)
+
+`base = ((nível + atributo) × poder_da_skill) ÷ 15`
+
+O `atributo` é STR para físico, MAG para mágico. O resultado passa por:
+
+1. **Estágios** de buff/debuff (Kaja / Kunda).
+2. **Passivas** (Pleroma, Concentrate/Charge — ×2,5).
+3. **Resistência** do alvo (×1,5 fraco · ×0,7 resist · ×0 null · reflete/absorve).
+4. **Variação** aleatória entre ×0,95 e ×1,05.
+
+Nenhuma raiz quadrada, nenhum piso complicado — se o número parece alto, é porque `nível + atributo` combinado com a skill deram nisso.
 
 O select de skill mostra a descrição do catálogo e o custo. Magatsuhi só aparece com a barra cheia (`MAG`).
 
@@ -52,7 +65,9 @@ Crítico: `5% + (LCK atk − LCK def)×0,4% + (nv atk − nv def)×0,2%`, entre 
 | --- | --- | --- | --- |
 | ≤3★ | Normal | ×1 | ×1 |
 | 4★ | Hard | ×0,7 | ×1,35 |
-| 5★ | Merciless | ×0,4 | ×1,7 |
+| 5★ | Merciless | ×0,55 | ×1,50 |
+| 6★ 💠 | Nightmare | ×0,45 | ×1,65 |
+| 7★ 🌈 | Godslayer | ×0,35 | ×1,85 |
 
 ## Arena
 
@@ -84,7 +99,7 @@ PvP **1 demon cada** (Mitama fora). Os dois confirmam. O perdedor **perde o demo
 | mild | ≤24 h do quarto | ×1,08 | ×1,04 |
 | none | resto | ×1 | ×1 |
 
-Peak/high também empurram ★4/★5 no spawn. Fim de semana (Brasil) ×2,2 / ×2,2 em 4★/5★. Lua **não** muda túneis nem o Salão.
+Peak/high também empurram 4★/5★/6★/7★ no spawn. Fim de semana (Brasil) dobra as chances dos tiers altos. Lua **não** muda túneis nem o Salão.
 
 ## XP e macca de luta
 

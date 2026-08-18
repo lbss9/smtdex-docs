@@ -1,25 +1,37 @@
 ---
 title: Demons
-description: Stars, IVs, potentials, the 100-cap roster, and all 284 species.
+description: Stars, per-tier caps, potentials, the 100-cap roster, and all 287 species.
 ---
 
-**284** species in the catalog. Each demon you own is an instance: level, stars, IVs, moveset, nickname, and Mitama bonus.
+**287** species in the catalog. Each demon you own is an instance: level, stars, moveset, nickname, and Mitama bonus.
 
 Full list: [demon catalog](../catalog-demons/). Skills: [skill catalog](../catalog-skills/).
 
 ## Stars
 
-1★ to 5★ (💠 legendary). They multiply stats/HP/MP: **1.0 / 1.1 / 1.25 / 1.45 / 1.75**. Fusion inherits the **minimum of the parents**. Mitama infusion does **not** change stars.
+**1★ to 7★** — 6★ is 💠 **Legendary**, 7★ is 🌈 **Mythic**. They multiply stats/HP/MP:
 
-## Stats and IVs
+| Tier | Multiplier | Level cap | Stat cap |
+| --- | ---: | ---: | ---: |
+| 1★ | ×0.85 | 20 | 50 |
+| 2★ | ×1.00 | 30 | 50 |
+| 3★ | ×1.15 | 40 | 50 |
+| 4★ | ×1.30 | 50 | 50 |
+| 5★ | ×1.50 | 60 | 50 |
+| 6★ 💠 | ×1.75 | 75 | 60 |
+| 7★ 🌈 | ×2.00 | 99 | 75 |
 
-HP/MP cap **9,999**. STR/MAG/VIT/AGI/LCK cap **999**. Damage per hit **99,999**.
+Fusion inherits the **minimum tier of the parents**. Mitama infusion does **not** change stars. Details: [stars & evolution](../stars-evolution/).
 
-IVs **0–31** per stat (HP, STR, MAG, VIT, AGI, LCK; max total 186). Fusion rolls fresh IVs.
+## Stats
+
+HP/MP cap **9,999**. STR / MAG / VIT / AGI / LCK use the **per-tier stat cap** above. Damage per hit **99,999**.
+
+**No IVs since 3.0.0** — two demons of the same species **and** tier have identical base stats. Individual difference only comes from **tier** and **infused Mitama**.
 
 **Potentials** (−9 to +9) change species damage, healing, ailment, and MP. They do **not** apply to Magatsuhi.
 
-Mitama: +20% on two stats up to **999**. Mitamas use **☯** and cannot join a party. See [Fusion](../fusion/).
+Mitama: **+1 flat** on two stats per infusion, cap **+20 total per stat**. Mitamas use **☯** and cannot join a party. See [Fusion](../fusion/).
 
 ## Resistances and affinities
 
@@ -27,7 +39,7 @@ Mitama: +20% on two stats up to **999**. Mitamas use **☯** and cannot join a p
 
 ## Inventory
 
-Cap **100** (pending mail does not count). `/inventory` lists, details, deletes. An expedition locks delete and learn. `/info` looks up the species or the instance.
+Cap **100** (pending mail does not count). `/player` → **Demons** lists, details, deletes. An expedition locks delete and learn. `/info` looks up the species or the instance.
 
 ## What never spawns
 

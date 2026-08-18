@@ -1,17 +1,18 @@
 ---
 title: Commands
-description: Every SMTDex 2.7.5 slash command.
+description: Every SMTDex 3.0.0 slash command.
 ---
 
-Private menus include **Close** and time out after **one idle minute**, except Confiscation (90 s).
+import { Aside } from '@astrojs/starlight/components';
+
+Private menus include **Close** and time out after **15 idle minutes** ("Sessão expirada"), except Confiscation (90 s).
 
 | Command | What it does |
 | --- | --- |
 | `/start` | Starter + 500 macca (once). Pixie, Slime, Onmoraki, Cait Sith, Angel. |
 | `/battle` | PvE: Arena, Exploration, Expedition, Infernal Hall. PvP: Duel, Confiscation. Manual or auto. |
-| `/party` | Up to 4 demons. Create, edit, delete. No Mitamas. |
-| `/inventory` | Items (Common / Valuables / Talisman / Skill Cards) and demons. Search. Learn. Use Shard/Crystal. |
-| `/info` | Catalog species **or** your instance (IVs, Mitama, moveset). |
+| `/player` | **Menu-driven inventory + party.** Items, demons, groups. Ephemeral. |
+| `/info` | Catalog species **or** your instance (tier, stats, Mitama, moveset). |
 | `/fuse` | Fuse 2 / 3 / 4, Reverse, Mitama Chamber. Filter and search. |
 | `/rags` | Rag's Jewelry: Elements, Mitamas, **Magatsuhi**. Search. |
 | `/shop` | Buy items and sell. Search. |
@@ -20,4 +21,34 @@ Private menus include **Close** and time out after **one idle minute**, except C
 | `/profile` | Title, Ref, Renown, macca, MAG, W/L, demons X/100. |
 | `/balance` | **The same panel** as `/profile`. |
 
-`/compendium`, `/lua`, `/sacrifice`, and `/trade` no longer exist.
+`/inventory`, `/party`, `/compendium`, `/lua`, `/sacrifice`, and `/trade` no longer exist.
+
+## `/player`
+
+The new home for anything private about your account. Ephemeral response, invoker-only buttons, **15-minute** idle timeout.
+
+```
+/player
+ ├─ Items 📦
+ │   ├─ Consumables 🧪   (heal, revive, status, support, dampener, attack, Magatsuhi)
+ │   ├─ Valuables 💎     (gems, key items — candelabra do not sell)
+ │   ├─ Talismans 🔮     (sealed for now)
+ │   ├─ Skill Cards 🎴   (transferable actives, passives, Magatsuhi)
+ │   └─ Back ⬅️ · Close ❌
+ ├─ Demons 👥            (list · detail · delete · learn skill)
+ ├─ Groups ⚔️            (create · edit · delete parties; up to 4 demons, no Mitamas)
+ └─ Close ❌
+```
+
+<Aside type="tip">
+Learn a skill: **Items → Skill Cards → pick card → pick demon**. The card is consumed. A full moveset (8) asks for a swap.
+</Aside>
+
+### From the old commands
+
+| Old | New |
+| --- | --- |
+| `/inventory` items | `/player → Items` |
+| `/inventory` demons | `/player → Demons` |
+| `/inventory` learn skill | `/player → Items → Skill Cards` |
+| `/party` list / create / edit / delete | `/player → Groups` |
